@@ -1,8 +1,9 @@
 .responsive-menu-icon div {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: #fff;
     margin: 6px 0;
+    border-radius: 3px;
 }
 
 /*==========  Non-Mobile First Method  ==========*/
@@ -24,6 +25,7 @@
     .slider_title {
         width: 90% !important;
         margin-top: 70px;
+        margin-right: 0px;
     }
     .left_square {
         width:320px;
@@ -230,6 +232,12 @@
     .cases_slider_title {
       padding: 60px 0 0 20px;
 
+    }
+    .slider_button {
+        margin-right: 0px;
+    }
+    .padding_title {
+        padding:0px;
     }
 }
 
