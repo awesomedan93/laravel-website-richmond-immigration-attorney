@@ -26,16 +26,24 @@
         margin-top: 70px;
     }
     .left_square {
-        width:360px;
+        width:340px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
     }
     .left_square img {
-        width:360px;
+        width:100%;
+        max-width:100%;
     }
     .right_square {
-        width:360px;
+        width:340px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
     }
     .right_square img {
-        width:360px;
+        width:100%;
+        max-width:100%;
     }
     .contact_form_email {
         width:99.7% !important;
@@ -45,7 +53,7 @@
         width:99.7% !important;
     }
     .square {
-            padding: 40px 60px;
+        padding: 40px 60px;
     }
     .slider_title {
         font-size:50px;
