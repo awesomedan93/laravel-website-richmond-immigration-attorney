@@ -658,3 +658,18 @@ article p {
 .case_row p {
     margin-top: 0px;
 }
+.sub-menu-items li a {
+    color: #E1E1E1;
+    text-decoration: none;
+}
+.sub-menu-items li a:hover {
+
+    text-decoration: underline;
+}
+.side-menu-wrapper li a:hover {
+    color:#fff;
+    text-decoration: underline;
+}
+.nav_left_block li.active a {
+    color:orange;
+}
