@@ -17,6 +17,9 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    .quote p {
+        padding:0px;
+    }
     .logo {
         width: 400px;
         margin: 0 auto;

@@ -1,3 +1,6 @@
+body {
+    overflow:auto;
+}
 body, div, span, applet, object, iframe, p, blockquote, pre, ul, li, ol, a, em, img, strong, fieldset, form, label, article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     margin: 0;
     padding: 0;
@@ -25,8 +28,8 @@ h3 {
   font-size:32px;
 }
 h6 {
-  font-size:20px;
   font-weight:100 !important;
+  font: normal normal normal 21px/1.5em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
 }
 h1, h2, h3, h4, h5, h6 { font :normal normal normal droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif; margin: 0px 0; font-weight: 100; }
 body {
@@ -83,6 +86,7 @@ p {
 }
 .blue_button {
   background-color: #2E529C;
+  text-transform: capitalize;
   color:#fff;
       -webkit-transition: background-color 300ms linear;
     -moz-transition: background-color 300ms linear;
@@ -149,7 +153,7 @@ p {
     max-height: 106px;
     padding: 10px 13px;
     font: normal normal normal 14px/1.43em 'Open Sans',sans-serif;
-    color 0.4s ease 0s;
+    color: 0.4s ease 0s;
     text-transform: capitalize;
 }
 .nav_items li a {
@@ -215,7 +219,7 @@ p {
 }
 .blue_title {
   color:#2E529C;
-  font: normal normal normal 48px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
+  font: normal normal normal 38px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
 }
 .square {
   background-color: #fff;
@@ -268,6 +272,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 .quote p {
   font-size:24px;
+  padding-right: 110px;
 }
 .socials{
   float:right;
@@ -473,6 +478,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 /* Case we handle */
 .slider_cases {
     height: 500px;
+    background-repeat: no-repeat;
    /* background-image: url(../img/cases.png);*/
 }
 .cases_slider_title {
