@@ -130,6 +130,7 @@ p {
 }
 .sub-menu {
   display:none;
+    z-index: 99;
 }
 .sub-menu li{
   display:block !important;
@@ -580,7 +581,7 @@ article p {
   text-decoration: none;
   line-height: 27px;
 }
-.article_title:hover {
+a.article_title:hover {
   text-decoration: underline;
 }
 .read_more {
@@ -683,12 +684,19 @@ article p {
     color:#fff;
     text-decoration: underline;
 }
-.nav_left_block li.active a {
+.nav_left_block li.active > a {
     color:orange;
+
 }
 .contact_lawyer {
     display: block;
 }
 .contact_lawyer img {
     vertical-align: bottom;
+}
+.testimonials_list li {
+    margin-bottom: 40px;
+}
+.testimonials_list p {
+    margin-bottom: 5px;
 }
