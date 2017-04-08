@@ -469,8 +469,11 @@ width:460px; height:auto; margin:4px; display: inline-block;
   font-weight: bold !important;
   font-size: 17px;
 }
+.case_row .bold_text {
+    font:normal normal normal 16px/1.55em 'open sans',sans-serif;
+}
 .lawyer_list {
-  padding: 15px 0 0 25px;
+  padding: 0 0 0 25px;
 }
 .lawyer_list li {
   list-style-type: disc;
@@ -663,6 +666,10 @@ article p {
 }
 .case_row p {
     margin-top: 0px;
+    margin-bottom: 0px;
+}
+.case_row .bold_text {
+    margin-top:25px;
 }
 .sub-menu-items li a {
     color: #E1E1E1;
@@ -678,4 +685,10 @@ article p {
 }
 .nav_left_block li.active a {
     color:orange;
+}
+.contact_lawyer {
+    display: block;
+}
+.contact_lawyer img {
+    vertical-align: bottom;
 }
