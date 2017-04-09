@@ -113,3 +113,12 @@
         </div>
     </div>
 @stop
+@section('custom-footer-js')
+<script>
+    $(function() {
+        $('.parallax').parallax({
+            imageSrc: '{{ asset("./img/slider_bg.png") }}',speed:0.3,naturalWidth:1500,nautralHeight:527
+        });
+    });
+</script>
+@endsection
