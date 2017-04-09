@@ -106,7 +106,7 @@
                     <textarea name="message" placeholder="Message"></textarea>
                     <input type="submit" value="Send" class="contact_form_submit">
                 </form>
-                <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="{{ url('/terms-and-conditions') }}">Terms & Conditions.</a></span>
+                <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="">Terms & Conditions.</a></span>
                 <br><br>
                 <img src="{{ asset('./img/fb.png') }}">
             </div>
