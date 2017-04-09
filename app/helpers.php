@@ -12,7 +12,10 @@ if(!function_exists('changeSubDomain')){
         $host[0] = $lang;
         $parsedUrl['host'] = implode('.',$host);
 
-        $newUrl = $parsedUrl['host'].$parsedUrl['path'];
+        $newUrl = $parsedUrl['host'];
+        if(array_key_exists('path',$parsedUrl)){
+            $newUrl .= $parsedUrl['path'];
+        }
         return $newUrl;
     }
 }
