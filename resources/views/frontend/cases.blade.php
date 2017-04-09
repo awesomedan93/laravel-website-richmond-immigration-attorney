@@ -44,7 +44,7 @@
                     <p>
                         Hiring a qualified traffic lawyer can save you money in fines and protect you from losing your driver’s license. Don’t risk losing your license if you don’t have to.
                     </p>
-                    <a href="{{ url('/cases/traffic-law) }}" class="button orange_button responsive_align">Learn More</a>
+                    <a href="{{ url('/cases/traffic-law') }}" class="button orange_button responsive_align">Learn More</a>
                 </div>
 
                 <a href="{{ url('/cases/traffic-law') }}"><img src="{{ asset('./img/traffic_law.webp') }}" class="cases_sub_block_right"></a>
@@ -78,7 +78,6 @@
                 naturalWidth:1500,
                 nautralHeight:394,
                 positionY:'-50%',
-
             });
         });
     </script>
