@@ -64,7 +64,7 @@
                     <div class="blue_square_title">
                         <h3 class="blue_title">DUI Law</h3>
                     </div>
-                    <a href="{{ url('/cases/dui-law') }}"><img src="{{ asset('./img/fiancee-k1-visa-lawyer-virginia.jpg) }}" alt="fiancee k1 visa lawyer virginia"></a>
+                    <a href="{{ url('/cases/dui-law') }}"><img src="{{ asset('./img/fiancee-k1-visa-lawyer-virginia.jpg') }}" alt="fiancee k1 visa lawyer virginia"></a>
                 </div>
             </div>
         </div>
@@ -106,9 +106,9 @@
                     <textarea name="message" placeholder="Message"></textarea>
                     <input type="submit" value="Send" class="contact_form_submit">
                 </form>
-                <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="">Terms & Conditions.</a></span>
+                <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="{{ url('/terms-and-conditions') }}">Terms & Conditions.</a></span>
                 <br><br>
-                <img src="">
+                <img src="{{ asset('./img/fb.png') }}">
             </div>
         </div>
     </div>
