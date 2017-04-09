@@ -108,7 +108,7 @@
                 </form>
                 <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="">Terms & Conditions.</a></span>
                 <br><br>
-                <img src="{{ asset('./img/fb.png') }}">
+                <img src="">
             </div>
         </div>
     </div>
