@@ -7,10 +7,7 @@
                 <a href="{{ url('/contact') }}" class="button slider_button">Get in touch</a>
             </div>
         </div>
-
-
     </div>
-
 
     <div class="home_first_row align_center">
         <div class="container">

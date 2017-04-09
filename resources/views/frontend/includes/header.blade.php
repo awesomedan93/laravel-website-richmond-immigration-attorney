@@ -45,8 +45,12 @@
         </ul>
         <!-- END: NAV -->
         <ul class="lang_switcher">
-            <li><a href="#">English</a></li>
 
+            @if(App::getLocale() == 'es')
+                <li><a href="http://{{ changeSubDomain('en') }}">English</a></li>
+            @else
+                <li><a href="http://{{ changeSubDomain('es') }}">Español</a></li>
+            @endif
         </ul>
         <div class="responsive-menu-icon slide-menu-open">
             <div></div>
@@ -83,4 +87,3 @@
         <li><a href="{{ url('/contact') }}">Contact</a></li>
     </ul>
 </div>
-<!-- END HEADER -->
