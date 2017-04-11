@@ -3,7 +3,7 @@
 <div class="container">
     <div class="about_us_left_block">
         <br>
-        <h2 class="blue_title">About Our Firm</h2>
+        <h2 class="blue_title">{{ trans('pages/about.title') }}</h2>
 
         <h6>Central Virginia’s Premier Immigration & Criminal Defense Attorneys</h6>
         <p>
@@ -15,7 +15,7 @@
         <br><br><br>
     </div>
     <div class="about_us_right_block">
-        <img src="{{ asset('./img/about_us.webp') }}">
+        <img src="@lang('pages/about.about_us_image')">
     </div>
 
     <div class="clear"></div>

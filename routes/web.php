@@ -1,7 +1,9 @@
 <?php
 
-// FRONT END PAGES
-Route::group(['middleware' => ['lang']], function () {
+Route::group([
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+    ], function() {
 
     Route::get('/', function () {
         return view('frontend.index');
@@ -45,4 +47,10 @@ Route::group(['middleware' => ['lang']], function () {
     Route::get('/terms-and-conditions', function () {
         return view('frontend.terms-and-conditions');
     });
+});
+
+//// FRONT END PAGES
+Route::group(['middleware' => ['lang']], function () {
+
+
 });

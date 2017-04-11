@@ -6,4 +6,4 @@
 <script src="{{ asset('./js/pace.min.js') }}"></script>
 <link href="{{ asset('./css/pace-theme-barber-shop.css') }}" rel="stylesheet" />
 
-<link rel="shortcut icon" href="favicons.png" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('./favicons.png') }}" type="image/x-icon">

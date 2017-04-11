@@ -4,8 +4,8 @@
 
         <div class="container">
             <div class="cases_slider_title">
-                <h2 class="attorneys_title">Cases We Handle</h2>
-                Our firm is a full service immigration law firm that handles family and employment based immigration cases, humanitarian relief and removal defense. We also have over twenty years of experience in Central Virginia practicing Criminal and Traffic defense.
+                <h2 class="attorneys_title">{{ trans('pages/cases.title') }}</h2>
+                {{ trans('pages/cases.sub_title') }}
             </div>
         </div>
 
@@ -17,50 +17,46 @@
 
             <div class="case_block">
                 <div class="cases_left_block">
-                    <h2 class="blue_title_cases">Criminal Defense</h2>
+                    <h2 class="blue_title_cases">{{ trans('pages/cases.criminal_defense') }}</h2>
 
-                    <p>There are many areas of criminal law cases in Virginia ranging from reckless driving to murder. Our experienced Richmond criminal attorneys have experience in many types of criminal cases.</p>
-                    <a href="{{ url('/cases/criminal-defense') }}" class="button orange_button responsive_align">Learn More</a>
+                    <p>{{ trans('pages/cases.criminal_defense_desc') }}</p>
+                    <a href="{{ url('/cases/criminal-defense') }}" class="button orange_button responsive_align">{{ trans('pages/general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/criminal-defense') }}"><img src="{{ asset('./img/criminal_defense.webp') }}" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/cases.criminal_defense_img')" class="cases_sub_block_right"></a>
 
             </div>
             <div class="case_block">
                 <div class="cases_left_block">
-                    <h2 class="blue_title_cases">Immigration Law</h2>
+                    <h2 class="blue_title_cases">{{ trans('pages/cases.immigration_law') }}</h2>
 
-                    <p>Being detained by immigration authorities and placed in removal proceedings can be a frightening experience If you have a family member, friend or employee facing deportation, the law firm of Novo Taghavi can help.                </p>
-                    <a href="{{ url('/cases/immigration_law') }}" class="button orange_button responsive_align">Learn More</a>
+                    <p>{{ trans('pages/cases.immigration_law_desc') }}</p>
+                    <a href="{{ url('/cases/immigration_law') }}" class="button orange_button responsive_align">{{ trans('pages/general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/immigration_law') }}"><img src="{{ asset('./img/immigration_law.webp') }}" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/immigration_law') }}"><img src="@lang('pages/cases.immigration_law_img')" class="cases_sub_block_right"></a>
 
             </div>
             <div class="case_block">
                 <div class="cases_left_block">
-                    <h2 class="blue_title_cases">Traffic Law</h2>
+                    <h2 class="blue_title_cases">{{ trans('pages/cases.traffic_law') }}</h2>
 
-                    <p>
-                        Hiring a qualified traffic lawyer can save you money in fines and protect you from losing your driver’s license. Don’t risk losing your license if you don’t have to.
-                    </p>
-                    <a href="{{ url('/cases/traffic-law') }}" class="button orange_button responsive_align">Learn More</a>
+                    <p>{{ trans('pages/cases.traffic_law_desc') }}</p>
+                    <a href="{{ url('/cases/traffic-law') }}" class="button orange_button responsive_align">{{ trans('pages/general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/traffic-law') }}"><img src="{{ asset('./img/traffic_law.webp') }}" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/traffic-law') }}"><img src="@lang('pages/cases.traffic_law_img')" class="cases_sub_block_right"></a>
 
             </div>
             <div class="case_block">
                 <div class="cases_left_block">
-                    <h2 class="blue_title_cases">DUI Law</h2>
+                    <h2 class="blue_title_cases">{{ trans('pages/cases.dui_law') }}</h2>
 
-                    <p>
-                        In addition to the legal consequences of a DUI in Virginia such as jail time, fines, and loss of license, a DUI conviction can cause you additional problems.
-                    </p>
-                    <a href="{{ url('/cases/dui-law') }}" class="button orange_button responsive_align">Learn More</a>
+                    <p>{{ trans('pages/cases.dui_law_desc') }}</p>
+                    <a href="{{ url('/cases/dui-law') }}" class="button orange_button responsive_align">{{ trans('pages/general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/dui-law') }}"><img src="{{ asset('./img/dui_law.webp') }}" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/dui-law') }}"><img src="@lang('pages/cases.dui_law_img')" class="cases_sub_block_right"></a>
 
             </div>
 
