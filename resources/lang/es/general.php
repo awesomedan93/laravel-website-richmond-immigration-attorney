@@ -17,14 +17,14 @@ return [
     'email_me' => 'Email me',
 
     //Menu
-    'about' => 'About',
-    'cases_we_handle' => 'Cases We Handle',
+    'about' => 'Acerca de',
+    'cases_we_handle' => 'Casos que manejamos',
         'case_criminal_defense' => 'Criminal Defense',
         'case_immigration_law' => 'Immigration Law',
         'case_traffic_law' => 'Traffic Law',
         'case_dui_law' => 'DUI Law',
-    'attorneys' => 'Attorneys',
-    'testimonials' => 'Testimonials',
+    'attorneys' => 'Abogados',
+    'testimonials' => 'Testimonios',
     'blog' => 'Blog',
-    'contact' => 'Contact'
+    'contact' => 'Contacto'
 ];
