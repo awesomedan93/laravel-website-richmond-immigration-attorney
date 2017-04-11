@@ -45,11 +45,10 @@
         </ul>
         <!-- END: NAV -->
         <ul class="lang_switcher">
-
             @if(App::getLocale() == 'es')
-                <li><a href="http://{{ changeSubDomain('en') }}">English</a></li>
+                <li><a href="{{LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
             @else
-                <li><a href="http://{{ changeSubDomain('es') }}">Español</a></li>
+                <li><a href="{{LaravelLocalization::getLocalizedURL('es') }}">Español</a></li>
             @endif
         </ul>
         <div class="responsive-menu-icon slide-menu-open">
