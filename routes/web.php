@@ -4,7 +4,7 @@ Route::group([
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
     ], function() {
-    dd(App::getLocale());
+
     Route::get('/', function () {
         return view('frontend.index');
     });
