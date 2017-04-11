@@ -36,7 +36,7 @@
                         <h3 class="blue_title">{{ trans('pages/home.crimminal_defense') }}</h3>
                     </div>
 
-                    <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" alt="@lang('pages/home.crimminal_defense_img')"></a>
+                    <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" alt="@lang('pages/home.crimminal_defense_img_alt')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
@@ -68,11 +68,9 @@
         <div class="container align_center_text">
             <div class="quote">
                 <div class="quote_icon"></div><div class="text_align_right">- Umar</div>
-
-                <p>"I am a highly satisfied client! Because of you, I got a green card. You are efficient and have saved a lot of my time in handling my complicated immigration case.</p>
-                <p>I will always stay with you for all my legal and immigration advice. I am also highly recommending you to all my friends and colleagues for immigration/ criminal issues.</p>
+                {!! trans('pages/home.testimonial') !!}
             </div>
-            <a href="{{ url('/testimonials') }}" class="button blue_button">More Testimonials</a>
+            <a href="{{ url('/testimonials') }}" class="button blue_button">{{ trans('general.more_testimonials')}}</a>
             <div class="clear"></div>
         </div>
     </div>
@@ -82,24 +80,24 @@
                 Get in Touch
             </h2>
             <span>
-                Contact us now for your FREE CASE EVALUATION
+                {{ trans('pages/home.contact_us_now') }}
             </span>
             <br><br><br>
             <div class="contact_form">
                 <form class="text_align_left">
 
-                    <input type="text" name="firstname" placeholder="First Name" class="contact_form_name">
+                    <input type="text" name="firstname" placeholder="{{ trans('pages/contact.first_name') }}" class="contact_form_name">
 
                     <input type="text" name="email" placeholder="Email" class="contact_form_email">
 
-                    <input type="text" name="lastname" placeholder="Last Name">
+                    <input type="text" name="lastname" placeholder="{{ trans('pages/contact.last_name') }}">
 
-                    <input type="text" name="phone" placeholder="Phone">
+                    <input type="text" name="phone" placeholder="{{ trans('pages/contact.phone') }}">
 
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <input type="submit" value="Send" class="contact_form_submit">
+                    <textarea name="message" placeholder="{{ trans('pages/contact.first_name') }}"></textarea>
+                    <input type="submit" value="{{ trans('pages/contact.send') }}" class="contact_form_submit">
                 </form>
-                <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="{{ url('/terms-and-conditions') }}">Terms & Conditions.</a></span>
+                <span class="terms">{!! trans('pages/contact.agreed_terms_text') !!}</span>
                 <br><br>
                 <img src="{{ asset('img/icons/fb.png') }}">
             </div>

@@ -17,20 +17,23 @@ return [
 
     //Cases Blocks
     'crimminal_defense' => 'Criminal Defense',
-    'crimminal_defense_img' => asset('img/immigration-arrest-richmond-va.jpg'),
-    'crimminal_defense_img_alt' => 'Immigration arrest richmond va',
+    'crimminal_defense_img' => asset('img/abogado-de-inmigracion-farmville-va.jpg'),
+    'crimminal_defense_img_alt' => 'Abogado de inmigracion farmville va',
 
     'immigration_law' => 'Immigration Law',
-    'immigration_law_img' => asset('img/immigration-lawyer-hopewell-va.jpg'),
-    'immigration_law_img_alt' => 'Immigration lawyer hopewell va',
+    'immigration_law_img' => asset('img/abogado-de-inmigracion-ashland-va.jpg'),
+    'immigration_law_img_alt' => 'Abogado de inmigracion ashland va',
 
     'traffic_law' => 'Traffic Law',
-    'traffic_law_img' => asset('img/work-visa-lawyer-richmond-va.jpg'),
-    'traffic_law_img_alt' => 'Work visa lawyer richmond va',
+    'traffic_law_img' => asset('img/abogado-immigracion-hopewell-va.jpg'),
+    'traffic_law_img_alt' => 'Abogado immigracion hopewell va',
 
     'dui_law' => 'DUI Law',
-    'dui_law_img' => asset('img/fiancee-k1-visa-lawyer-virginia.jpg'),
-    'dui_law_img_alt' => 'Fiancee k1 visa lawyer virginia',
+    'dui_law_img' => asset('img/abogado-de-inmigracion-petersburg-va.jpg'),
+    'dui_law_img_alt' => 'Abogado de inmigracion petersburg va',
 
+    //Testimonial
+    'testimonial' => '<p>"I am a highly satisfied client! Because of you, I got a green card. You are efficient and have saved a lot of my time in handling my complicated immigration case.</p>
+                <p>I will always stay with you for all my legal and immigration advice. I am also highly recommending you to all my friends and colleagues for immigration/ criminal issues.</p>'
 
 ];

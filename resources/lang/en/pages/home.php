@@ -32,5 +32,9 @@ return [
     'dui_law_img' => asset('img/fiancee-k1-visa-lawyer-virginia.jpg'),
     'dui_law_img_alt' => 'Fiancee k1 visa lawyer virginia',
 
+    //Testimonial
+    'testimonial' => '<p>"I am a highly satisfied client! Because of you, I got a green card. You are efficient and have saved a lot of my time in handling my complicated immigration case.</p>
+                <p>I will always stay with you for all my legal and immigration advice. I am also highly recommending you to all my friends and colleagues for immigration/ criminal issues.</p>',
 
+    'contact_us_now' => 'Contact us now for your FREE CASE EVALUATION'
 ];
