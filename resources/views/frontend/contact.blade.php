@@ -23,9 +23,9 @@
                 <br><br>
 
                 <div class="socials_contact">
-                    <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('./img/g+.png') }}"></a>
-                    <a href="https://www.facebook.com/novotaghavi" target="_blank"><img src="{{ asset('./img/fb-top.png') }}"></a></a>
-                    <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('./img/yt.png') }}"></a>
+                    <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('img/icons/g+.png') }}"></a>
+                    <a href="https://www.facebook.com/novotaghavi" target="_blank"><img src="{{ asset('img/icons/fb-top.png') }}"></a></a>
+                    <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('img/icons/yt.png') }}"></a>
                 </div>
                 <p>
                     {{ trans('general.address') }}:

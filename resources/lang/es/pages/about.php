@@ -18,6 +18,7 @@ return [
     Soulmaz or Raul and see how we can help you navigate these interesting times.',
 
     'get_in_touch' => 'Get In Touch',
-    'about_us_image' =>  asset('./img/about_us.webp')
+    'about_us_image' =>  asset('img/mejores-abogados-en-richmond-va.webp'),
+    'about_us_image_alt' => 'Mejores abogados en richmond va'
 
 ];

@@ -2,9 +2,9 @@
 @section('content')
     <div class="slider parallax">
         <div class="container">
-            <div class="slider_title">Let us build a strong case for you.</div>
+            <div class="slider_title">{{ trans('pages/home.title') }}</div>
             <div class="align_center">
-                <a href="{{ url('/contact') }}" class="button slider_button">Get in touch</a>
+                <a href="{{ url('/contact') }}" class="button slider_button">{{ trans('pages/home.get_in_touch') }}</a>
             </div>
         </div>
     </div>
@@ -13,15 +13,13 @@
         <div class="container">
             <div class="square">
 
-                <h2 class="blue_title">About Novo Taghavi</h2>
+                <h2 class="blue_title">{{ trans('pages/home.about_title') }}</h2>
 
-                <h6>Central Virginia’s Premier Immigration & Criminal Defense Firm</h6>
+                <h6>{{ trans('pages/home.about_sub_title') }}</h6>
 
-                <p>
-                    Rapidly changing social and family dynamics have produced a need for legal practitioners skilled in criminal as well as immigration matters, commonly referred to as Crimmigration Law.  Whether you have a legal issue that directly affects you or a loved one, let Novo Taghavi build a strong case for you.  We have over twenty years combined experience in State and Federal Courts protecting the rights of those clients facing the toughest cases, such as: rape, murder, drug distribution, DUI’s, removal and deportation, asylum petitions, as well other forms of immigrations relief.  You will personally meet with your attorney, and understand every legal step along the way towards having your case resolved promptly and professionally.  Don’t waste time, call us today and we will start building a strong case for you right away!
-                </p>
+                <p>{{ trans('pages/home.about_description') }}</p>
                 <br>
-                <a href="{{ url('/about') }}" class="button blue_button">Learn more about us</a>
+                <a href="{{ url('/about') }}" class="button blue_button">{{ trans('pages/home.learn_more_about_us') }}</a>
             </div>
         </div>
     </div>
@@ -29,39 +27,37 @@
     <div class="home_second_row align_center">
         <div class="container">
 
-            <h2 class="blue_title">Cases We Handle</h2>
+            <h2 class="blue_title">{{ trans('pages/home.cases') }}</h2>
 
-            <p>
-                Our firm is a full-service immigration law firm that handles family and employment-based immigration cases, humanitarian relief and removal defense. We also have over twenty years of experience in Central Virginia practicing Criminal and Traffic defense. Our attorneys are well-versed in the cross-section of Criminal and Immigration Law in what is known to be Crimmigration Law. Learn more about how we can make your case our priority.
-            </p>
+            <p>{{ trans('pages/home.cases_description') }}</p>
             <div class="first_row">
                 <div class="left_square">
                     <div class="blue_square_title">
-                        <h3 class="blue_title">Criminal Defense</h3>
+                        <h3 class="blue_title">{{ trans('pages/home.crimminal_defense') }}</h3>
                     </div>
 
-                    <a href="{{ url('/cases/criminal-defense') }}"><img src="{{ asset('./img/immigration-arrest-richmond-va.jpg') }}" alt="immigration arrest richmond va"></a>
+                    <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" alt="@lang('pages/home.crimminal_defense_img')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
-                        <h3 class="blue_title">Immigration Law</h3>
+                        <h3 class="blue_title">{{ trans('pages/home.immigration_law') }}</h3>
                     </div>
-                    <a href="{{ url('/cases/immigration_law') }}"><img src="{{ asset('./img/immigration-lawyer-hopewell-va.jpg') }}" alt="immigration lawyer hopewell va"></a>
+                    <a href="{{ url('/cases/immigration_law') }}"><img src="@lang('pages/home.immigration_law_img')" alt="@lang('pages/home.immigration_law_img_alt')"></a>
                 </div>
             </div>
             <div class="clear"></div>
             <div class="second_row">
                 <div class="left_square">
                     <div class="blue_square_title">
-                        <h3 class="blue_title">Traffic Law</h3>
+                        <h3 class="blue_title">{{ trans('pages/home.traffic_law') }}</h3>
                     </div>
-                    <a href="{{ url('/cases/traffic-law') }}"><img src="{{ asset('./img/work-visa-lawyer-richmond-va.jpg') }}" alt="work visa lawyer richmond va"></a>
+                    <a href="{{ url('/cases/traffic-law') }}"><img src="@lang('pages/home.traffic_law_img')" alt="@lang('pages/home.traffic_law_img_alt')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
-                        <h3 class="blue_title">DUI Law</h3>
+                        <h3 class="blue_title">{{ trans('pages/home.dui_law') }}</h3>
                     </div>
-                    <a href="{{ url('/cases/dui-law') }}"><img src="{{ asset('./img/fiancee-k1-visa-lawyer-virginia.jpg') }}" alt="fiancee k1 visa lawyer virginia"></a>
+                    <a href="{{ url('/cases/dui-law') }}"><img src="@lang('pages/home.dui_law_img')" alt="@lang('pages/home.dui_law_img_alt')"></a>
                 </div>
             </div>
         </div>
@@ -105,7 +101,7 @@
                 </form>
                 <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="{{ url('/terms-and-conditions') }}">Terms & Conditions.</a></span>
                 <br><br>
-                <img src="{{ asset('./img/fb.png') }}">
+                <img src="{{ asset('img/icons/fb.png') }}">
             </div>
         </div>
     </div>
@@ -114,7 +110,7 @@
 <script>
     $(function() {
         $('.parallax').parallax({
-            imageSrc: '{{ asset("./img/slider_bg.png") }}',speed:0.3,naturalWidth:1500,nautralHeight:527
+            imageSrc: '{{ asset("img/slider_bg.png") }}',speed:0.3,naturalWidth:1500,nautralHeight:527
         });
     });
 </script>

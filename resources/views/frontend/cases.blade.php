@@ -69,7 +69,7 @@
     <script>
         $(function() {
             $('.parallax-window').parallax({
-                imageSrc: '{{ asset('./img/cases.png') }}',
+                imageSrc: '{{ asset('img/cases.png') }}',
                 speed:0.5,
                 naturalWidth:1500,
                 nautralHeight:394,

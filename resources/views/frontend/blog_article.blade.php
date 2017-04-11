@@ -9,7 +9,7 @@
                     <span class="article_title">Deportation threat strikes fear in county’s growing Latino population</span><br>
                     <span class="">March 27, 2017</span>
                     <div class="article_content">
-                        <img src="./img/article_image.png">
+                        <img src="img/article_image.png">
                         <p>
                             Attorney Soulmaz Taghavi was featured in Chesterfield Observer stressing that there is indeed a fresh wave of fear of deportation among Chesterfield County's growing Latino population.
 
@@ -28,7 +28,7 @@
                 <span class="widget_title">
                     Featured Posts
                 </span>
-                    <img src="./img/article_image.png">
+                    <img src="img/article_image.png">
                     <p>
                         Deportation threat strikes fear in county’s growing Latino population
 
@@ -40,7 +40,7 @@
                 <span class="widget_title">
                     Recent Posts
                 </span>
-                    <img src="./img/article_image.png">
+                    <img src="img/article_image.png">
                     <p>
                         Deportation threat strikes fear in county’s growing Latino population
 

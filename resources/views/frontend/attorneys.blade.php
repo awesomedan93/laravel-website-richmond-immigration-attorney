@@ -14,7 +14,7 @@
 <div class="attorneys_row">
     <div class="container">
         <div class="attorneys_block">
-            <img src="@lang('pages/attorneys.raul_img')" class="attorneys_sub_block" alt="best criminal lawyer in chesterfield va">
+            <img src="@lang('pages/attorneys.raul_img')" class="attorneys_sub_block" alt="@lang('pages/attorneys.raul_img_alt')">
             <span class="attorneys_sub_block_right">
                 <br>
                 <h6>Attorney</h6>
@@ -25,7 +25,7 @@
 
         </div>
         <div class="attorneys_block">
-            <img src="@lang('pages/attorneys.soulmaz_img')" class="attorneys_sub_block" alt="best immigration lawyer in henrico">
+            <img src="@lang('pages/attorneys.soulmaz_img')" class="attorneys_sub_block" alt="@lang('pages/attorneys.soulmaz_img_alt')">
             <span class="attorneys_sub_block_right">
                 <br>
                 <h6>Attorney</h6>
@@ -42,7 +42,7 @@
 <script>
     $(function() {
         $('.slider_attorneys').parallax({
-            imageSrc: '{{ asset("./img/attorneys.png") }}',
+            imageSrc: '{{ asset("img/attorneys.png") }}',
             speed:0.5,
             naturalWidth:1960,
             nautralHeight:1120

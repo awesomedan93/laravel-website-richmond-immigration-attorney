@@ -2,12 +2,12 @@
 <header class="header">
     <div class="container">
 
-        <a href="{{ url('/') }}"><img src="{{ asset('./img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"></a>
+        <a href="{{ url('/') }}"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"></a>
         <div class="socials">
             <span class="tel"><a href="tel:(804) 614-6920">(804) 614-6920</a></span><br>
-            <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('./img/g+.png') }}"></a>
-            <a href="https://www.facebook.com/novotaghavi/" target="_blank"><img src="{{ asset('./img/fb-top.png') }}"></a>
-            <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('./img/yt.png') }}"></a>
+            <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('img/icons/g+.png') }}"></a>
+            <a href="https://www.facebook.com/novotaghavi/" target="_blank"><img src="{{ asset('img/icons/fb-top.png') }}"></a>
+            <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('img/icons/yt.png') }}"></a>
         </div>
     </div>
 </header>

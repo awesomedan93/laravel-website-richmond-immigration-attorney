@@ -194,7 +194,7 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;*/
-  /*background-image: url("../img/attorneys.png");*/
+  /*background-image: url(".img/attorneys.png");*/
 }
 .home_first_row {
 
@@ -445,7 +445,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
   background-repeat: no-repeat;
 
   background-size: cover;
-  background-image: url("../img/testimonials_slider_bg.jpg");
+  background-image: url("/img/testimonials_slider_bg.jpg");
 }
 .testimonails_slider_title {
   padding: 100px 0 0 80px;
@@ -496,7 +496,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 .slider_cases {
     height: 500px;
     background-repeat: no-repeat;
-   /* background-image: url(../img/cases.png);*/
+   /* background-image: url(.img/cases.png);*/
 }
 .cases_slider_title {
   padding: 150px 0 0 70px;
@@ -672,7 +672,7 @@ a.article_title:hover {
   width: 67px;
   height: 67px;
 
-  background-image: url(../img/quote.png);
+  background-image: url(./img/quote.png);
 }
 .case_quote_row {
   background-color: #F5F6F8;

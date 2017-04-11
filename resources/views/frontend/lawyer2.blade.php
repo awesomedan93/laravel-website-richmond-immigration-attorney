@@ -5,7 +5,7 @@
             <br>
             <div class="lawyer_block">
                 <div class="lawyer_left_block">
-                    <img src="@lang('pages/attorneys/soulmaz.img')" alt="best immigration lawyer in chesterfield">
+                    <img src="@lang('pages/attorneys/soulmaz.img')" alt="@lang('pages/attorneys/soulmaz.img_alt')">
                     <p>
                         {{ trans('general.email') }}: raul@novotaghavi.com<br>
                         {{ trans('general.phone') }}: (804) 614-6920
@@ -18,7 +18,7 @@
                 <h2 class="blue_title">Soulmaz Taghavi</h2>
                 <div class="contact_lawyer">
                     <a href="mailto:soulmaz@novotaghavi.com" class="button blue_button responsive_align">{{ trans('general.email_me') }}</a>
-                    <a href="https://www.linkedin.com/in/soulmaz-taghavi-26686a73" target="_blank"><img src="{{ asset('./img/in.png') }}"></a>
+                    <a href="https://www.linkedin.com/in/soulmaz-taghavi-26686a73" target="_blank"><img src="{{ asset('img/icons/in.png') }}"></a>
                 </div>
                 {!! trans('pages/attorneys/soulmaz.about') !!}
             <br>

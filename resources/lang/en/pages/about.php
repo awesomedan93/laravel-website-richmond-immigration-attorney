@@ -18,6 +18,7 @@ return [
     Soulmaz or Raul and see how we can help you navigate these interesting times.',
 
     'get_in_touch' => 'Get In Touch',
-    'about_us_image' =>  asset('./img/about_us.webp')
+    'about_us_image' =>  asset('img/best-immigration-lawyers-in-henrico.webp'),
+    'about_us_image_alt' => 'Best immigration lawyers in henrico'
 
 ];
