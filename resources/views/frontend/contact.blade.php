@@ -5,39 +5,32 @@
             <br>
             <div id="map"></div>
 
-            <h2 class="blue_title padding_title">
-                Get in Touch
-            </h2>
-            <span>
-                Contact us now for your FREE CASE EVALUTATION
-            </span>
+            <h2 class="blue_title padding_title">{{ trans('pages/contact.get_in_touch') }}</h2>
+            <span>{{ trans('pages/contact.contact_us_now') }}</span>
             <br><br><br>
             <div class="contact_form contact_form_page">
+
                 <form class="text_align_left">
-
                     <input type="text" name="firstname" placeholder="First Name" class="contact_form_name">
-
                     <input type="text" name="email" placeholder="Email" class="contact_form_email">
-
                     <input type="text" name="lastname" placeholder="Last Name">
-
                     <input type="text" name="phone" placeholder="Phone">
-
                     <textarea name="message" placeholder="Message"></textarea>
-                    <input type="submit" value="Send" class="contact_form_submit">
+                    <input type="submit" value="{{ trans('pages/contact.send') }}" class="contact_form_submit">
                 </form>
-                <span class="terms">*By submitting this contact form, I have read & agreed to the <a href="{{ url('/terms-and-conditions') }}">Terms & Conditions.</a></span>
+
+                <span class="terms">{!! trans('pages/contact.agreed_terms_text') !!}</span>
                 <br><br>
 
                 <div class="socials_contact">
-                    <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('./img/g+.png') }}"></a>
-                    <a href="https://www.facebook.com/novotaghavi" target="_blank"><img src="{{ asset('./img/fb-top.png') }}"></a></a>
-                    <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('./img/yt.png') }}"></a>
+                    <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('img/icons/g+.png') }}"></a>
+                    <a href="https://www.facebook.com/novotaghavi" target="_blank"><img src="{{ asset('img/icons/fb-top.png') }}"></a></a>
+                    <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('img/icons/yt.png') }}"></a>
                 </div>
                 <p>
-                    Address:
+                    {{ trans('general.address') }}:
                     1500 Forest Avenue, Suite 124, Richmond, VA<br>
-                    Phone:
+                    {{ trans('general.phone') }}:
                     804-614-6920
                 </p>
             </div>
