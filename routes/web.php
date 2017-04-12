@@ -53,4 +53,4 @@ Route::group([
 
 Auth::routes();
 
-Route::get('/home', 'Frontend\HomeController@index');
+Route::get('/dashboard/blog', 'Backend\BlogController@index');
