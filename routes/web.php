@@ -50,7 +50,7 @@ Route::group([
 });
 
 //// FRONT END PAGES
-Route::group(['middleware' => ['lang']], function () {
 
+Auth::routes();
 
-});
+Route::get('/home', 'Frontend\HomeController@index');
