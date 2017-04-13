@@ -45,7 +45,12 @@
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="title">Post title</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+                                    <input type="text" class="form-control basic-usage" id="title" name="title" placeholder="Enter title">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="title">Post slug</label>
+                                    <input type="text" class="form-control" id="permalink" name="title" placeholder="Enter slug">
                                 </div>
                                 <div class="form-group">
                                     <label>Date:</label>
@@ -114,8 +119,22 @@
 <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
 <!-- bootstrap datepicker -->
 <script src="{{ asset('plugins/datepicker/bootstrap-datepicker.js') }}"></script>
+<script src="{{ asset('plugins/speakingUrl/speakingurl.js') }}"></script>
+<script src="{{ asset('plugins/stringToSlug/jquery.stringtoslug.min.js') }}"></script>
+
 <script>
     $(function () {
+        $(".basic-usage").stringToSlug({
+            setEvents: 'keyup keydown blur',
+            getPut: '#permalink',
+            space: '-',
+            prefix: '',
+            suffix: '',
+            replace: '',
+            AND: 'and',
+            options: {},
+            callback: false
+        });
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         CKEDITOR.replace('editor1');
