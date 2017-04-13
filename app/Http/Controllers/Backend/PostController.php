@@ -16,7 +16,8 @@ class PostController extends Controller
 
     public function index()
     {
-        return view('backend.pages.blog.posts');
+        $posts = Post::all()->where('active','=','1');
+        return view('backend.pages.blog.posts')->with('posts',$posts);
     }
 
     public function create()

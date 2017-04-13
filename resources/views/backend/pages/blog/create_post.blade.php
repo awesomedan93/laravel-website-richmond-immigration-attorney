@@ -22,16 +22,16 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-md-7">
+                <form method="post" action="{{ route('blog.store') }}" >
+                    {{ csrf_field() }}
+                <div class="col-md-6">
                     <div class="box box-info">
                         <div class="box-header">
-                            <h3 class="box-title">CK Editor
-                                <small>Advanced and full of features</small>
-                            </h3>
+                            <h3 class="box-title">General Information</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body pad">
-                            <form method="post" action="{{ route('blog.store') }}" >
+
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="title">Post title</label>
@@ -48,9 +48,7 @@
                                     </div>
                                     <!-- /.input group -->
                                 </div>
-                                <textarea id="editor1" name="body" rows="10" cols="80">
-                                                    This is my textarea to be replaced with CKEditor.
-                                </textarea>
+
 
                                 <div class="form-group">
                                     <label for="exampleInputFile">File input</label>
@@ -58,22 +56,40 @@
 
                                     <p class="help-block">Example block-level help text here.</p>
                                 </div>
-
-                                <div class="form-group">
-                                    <label>Select</label>
-                                    <select class="form-control" name="active">
-                                        <option value="1">Active</option>
-                                        <option value="0">Inactive</option>
-                                    </select>
+                                <div class="row">
+                                    <div class="form-group col-xs-3">
+                                        <label>Status</label>
+                                        <select class="form-control">
+                                            <option value="1">Published</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
+                                    </div>
                                 </div>
+                            <button type="submit" class="btn btn-primary">Save</button>
 
-                                <button type="submit" class="btn btn-primary">Save</button>
-                            </form>
+
                         </div>
                     </div>
                     <!-- /.box -->
                 </div>
                 <!-- /.col-->
+                <div class="col-md-6">
+                    <div class="box box-info">
+                        <div class="box-header">
+                            <h3 class="box-title">Post Content</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body pad">
+                                <textarea id="editor1" name="body" rows="10" cols="80">
+                                                    This is my textarea to be replaced with CKEditor.
+                                </textarea>
+                        </div>
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col-->
+
+                </form>
             </div>
             <!-- ./row -->
         </section>
