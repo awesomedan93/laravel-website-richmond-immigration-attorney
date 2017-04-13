@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->string('title')->unique();
             $table->text('body');
             $table->string('slug')->unique();
-            $table->boolean('active');
+            $table->boolean('active')->default(1);
             $table->timestamps();
         });
     }

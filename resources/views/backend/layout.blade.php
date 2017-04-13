@@ -2,6 +2,7 @@
 <html>
 <head>
 @include('backend.includes.head')
+@yield('custom-header-assets')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">

@@ -22,7 +22,10 @@
             <div class="col-xs-12">
 
                 <div class="box">
-
+                    <div class="box-header">
+                        <h3 class="box-title">Auctioneers list</h3>
+                        <a href="{{ route('blog.create') }}" role="button" class="btn btn-success btn-md pull-right">Create</a>
+                    </div>
                     <div class="box-body">
                         <table id="blog_list" class="table table-bordered table-striped">
                             <thead>
@@ -190,6 +193,7 @@
     $(function () {
         $("#blog_list").DataTable({
             "lengthChange": false,
+            "searching": false
         });
     });
 
