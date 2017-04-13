@@ -17,6 +17,16 @@
                 <li><a href="#">Forms</a></li>
                 <li class="active">Editors</li>
             </ol>
+            <br>
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </section>
 
         <!-- Main content -->
@@ -44,7 +54,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" id="datepicker" name="date">
+                                        <input type="text" class="form-control pull-right" id="datepicker" name="created_at">
                                     </div>
                                     <!-- /.input group -->
                                 </div>
@@ -59,7 +69,7 @@
                                 <div class="row">
                                     <div class="form-group col-xs-3">
                                         <label>Status</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="active">
                                             <option value="1">Published</option>
                                             <option value="0">Inactive</option>
                                         </select>
@@ -114,6 +124,8 @@
         $('#datepicker').datepicker({
             autoclose: true
         });
+        $("#datepicker").datepicker("setDate", new Date());
+
     });
 </script>
 
