@@ -33,7 +33,7 @@
                                 <th>id</th>
                                 <th>title</th>
                                 <th>Status</th>
-                                <th>Created At</th>
+                                <th>Published At</th>
                                 <th class="no-sort">Actions</th>
                             </tr>
                             </thead>
@@ -52,10 +52,10 @@
                                                         {{--data-url="{{$ajaxRoute}}" data-pk="{{ $item->id }}" data-store="{{ $store }}"--}}
                                                         {{--data-value="{{ $status_per_store == 1 ? 0 : 1 }}">{{ $status_per_store ? 'Active' : 'Inactive' }}</button>--}}
                                     </td>
-                                    <td>{{ $post->created_at }}</td>
+                                    <td>{{ $post->published_at }}</td>
                                     <td>
                                         <a href="#" target="_blank" role="button" class="btn btn-link btn-xs">View</a>
-                                        <a href="#" role="button" class="btn btn-primary btn-xs">Edit</a>
+                                        <a href="{{ route('blog.edit',$post->id) }}" role="button" class="btn btn-primary btn-xs">Edit</a>
 
                                         <button type="submit" data-id="{{ $post->id }}" class="btn btn-danger btn-xs button-delete-auctioneer">Delete</button>
 
@@ -68,7 +68,7 @@
                                 <th>id</th>
                                 <th>title</th>
                                 <th>Status</th>
-                                <th>Created At</th>
+                                <th>Published At</th>
                                 <th>Actions</th>
                             </tr>
                             </tfoot>

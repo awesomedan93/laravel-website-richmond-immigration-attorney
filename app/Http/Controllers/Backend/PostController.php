@@ -10,20 +10,16 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    public function __construct()
-    {
-
-    }
 
     public function index()
     {
-        $posts = Post::all()->where('active','=','1');
-        return view('backend.pages.blog.posts')->with('posts',$posts);
+        $posts = Post::all();
+        return view('backend.pages.blog.list')->with('posts',$posts);
     }
 
     public function create()
     {
-        return view('backend.pages.blog.create_post');
+        return view('backend.pages.blog.new');
     }
 
     public function store(Request $request)
@@ -31,7 +27,8 @@ class PostController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'created_at' => 'required',
+            'slug' => 'required|unique:posts',
+            'published_at' => 'required',
             'active' => 'required',
             'body' => 'required'
         ]);
@@ -39,10 +36,9 @@ class PostController extends Controller
         $inputData = $request->all();
         $inputData['author_id'] = Auth::user()->id;
         $inputData['slug'] = str_slug($inputData['title'],'-');
-        $createdAt = $inputData['created_at'];
 
-        $date = \DateTime::createFromFormat('m/d/Y', $createdAt);
-        $inputData['created_at'] = $date->format('Y-m-d H:i:s');
+        $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
+        $inputData['published_at'] = $date->format('Y-m-d');
 
         $post = new Post();
 
@@ -52,6 +48,44 @@ class PostController extends Controller
         if($saved){
             return redirect()->route('blog.index');
         }
+
+    }
+
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+
+        return view('backend.pages.blog.edit')->with('post',$post);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'slug' => 'required|unique:posts,slug,' . $id,
+            'published_at' => 'required',
+            'active' => 'required',
+            'body' => 'required'
+        ]);
+
+        $inputData = $request->all();
+
+        $inputData['author_id'] = Auth::user()->id;
+
+        $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
+        $inputData['published_at'] = $date->format('Y-m-d');
+
+        $updated = Post::find($id)->update($inputData);
+
+        if($updated){
+            return redirect()->route('blog.index');
+        }else{
+            return redirect()->back()->withInput();
+        }
+    }
+
+    public function show()
+    {
 
     }
 }

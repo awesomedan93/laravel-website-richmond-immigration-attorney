@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="title">Post slug</label>
-                                    <input type="text" class="form-control" id="permalink" name="title" placeholder="Enter slug">
+                                    <input type="text" class="form-control" id="permalink" name="slug" placeholder="Enter slug">
                                 </div>
                                 <div class="form-group">
                                     <label>Date:</label>
@@ -59,7 +59,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" id="datepicker" name="created_at">
+                                        <input type="text" class="form-control pull-right" id="datepicker" name="published_at">
                                     </div>
                                     <!-- /.input group -->
                                 </div>

@@ -53,6 +53,8 @@ Route::group([
 
 Auth::routes();
 
-Route::get('/dashboard/blog', 'Backend\PostController@index');
+Route::group(['middleware' => ['auth']], function () {
 
-Route::resource('/dashboard/blog', 'Backend\PostController');
+    Route::resource('/dashboard/blog', 'Backend\PostController');
+
+});
