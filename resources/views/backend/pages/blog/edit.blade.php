@@ -32,7 +32,7 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <form action="{{ route('blog.show', $post->id) }}" method="POST">
+                <form action="{{ route('blog.show', $post->id) }}" method="POST" enctype="multipart/form-data">
                     {{ method_field('PATCH') }}
                     {{ csrf_field() }}
                     <div class="col-md-6">
@@ -67,7 +67,7 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputFile">File input</label>
-                                    <input type="file" id="exampleInputFile">
+                                    <input type="file" id="exampleInputFile" name="image">
 
                                     <p class="help-block">Example block-level help text here.</p>
                                 </div>
@@ -149,5 +149,7 @@
 
         });
     </script>
+
+
 
 @endsection

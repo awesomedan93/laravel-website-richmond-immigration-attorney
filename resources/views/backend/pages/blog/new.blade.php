@@ -32,7 +32,7 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <form method="post" action="{{ route('blog.store') }}" >
+                <form method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 <div class="col-md-6">
                     <div class="box box-info">
@@ -45,12 +45,12 @@
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="title">Post title</label>
-                                    <input type="text" class="form-control basic-usage" id="title" name="title" placeholder="Enter title">
+                                    <input type="text" class="form-control basic-usage" id="title" name="title" placeholder="Enter title" value="{{ old('title') }}">
 
                                 </div>
                                 <div class="form-group">
                                     <label for="title">Post slug</label>
-                                    <input type="text" class="form-control" id="permalink" name="slug" placeholder="Enter slug">
+                                    <input type="text" class="form-control" id="permalink" name="slug" placeholder="Enter slug" value="{{ old('slug') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Date:</label>
@@ -64,10 +64,9 @@
                                     <!-- /.input group -->
                                 </div>
 
-
                                 <div class="form-group">
                                     <label for="exampleInputFile">File input</label>
-                                    <input type="file" id="exampleInputFile">
+                                    <input type="file" id="exampleInputFile" name="image">
 
                                     <p class="help-block">Example block-level help text here.</p>
                                 </div>
@@ -95,9 +94,7 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body pad">
-                                <textarea id="editor1" name="body" rows="10" cols="80">
-                                                    This is my textarea to be replaced with CKEditor.
-                                </textarea>
+                                <textarea id="editor1" name="body" rows="10" cols="80"></textarea>
                         </div>
                     </div>
                     <!-- /.box -->
@@ -143,7 +140,13 @@
         $('#datepicker').datepicker({
             autoclose: true
         });
-        $("#datepicker").datepicker("setDate", new Date());
+        var date = "{!! old('published_at') !!}";
+
+        if(date){
+            $("#datepicker").datepicker("setDate", new Date(date));
+        }else{
+            $("#datepicker").datepicker("setDate", new Date());
+        }
 
     });
 </script>

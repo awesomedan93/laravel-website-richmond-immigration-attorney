@@ -1,6 +1,7 @@
 <?php
 
-if(!function_exists('changeSubDomain')){
+if(!function_exists('changeSubDomain'))
+{
     function changeSubDomain($lang)
     {
         $url = url()->current();
@@ -17,5 +18,12 @@ if(!function_exists('changeSubDomain')){
             $newUrl .= $parsedUrl['path'];
         }
         return $newUrl;
+    }
+}
+
+if(!function_exists('excerpt')){
+    function excerpt($string)
+    {
+        return substr($string, 0, 250) . '...';
     }
 }

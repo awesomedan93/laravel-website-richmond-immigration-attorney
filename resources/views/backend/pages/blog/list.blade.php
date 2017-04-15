@@ -54,10 +54,10 @@
                                     </td>
                                     <td>{{ $post->published_at }}</td>
                                     <td>
-                                        <a href="#" target="_blank" role="button" class="btn btn-link btn-xs">View</a>
+                                        <a href="{{ url('blog/'.$post->slug) }}" target="_blank" role="button" class="btn btn-link btn-xs">View</a>
                                         <a href="{{ route('blog.edit',$post->id) }}" role="button" class="btn btn-primary btn-xs">Edit</a>
 
-                                        <button type="submit" data-id="{{ $post->id }}" class="btn btn-danger btn-xs button-delete-auctioneer">Delete</button>
+                                        <button type="submit" data-slug="{{ $post->slug }}" class="btn btn-danger btn-xs button-delete-post">Delete</button>
 
                                     </td>
                                 </tr>
@@ -114,5 +114,52 @@
     //        "info": true,
     //        "autoWidth": false
     //    });
+</script>
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $(".button-delete-post").click(function(e){
+        var slug = $(this).data('slug');
+        var row = $(this).closest('tr');
+        e.preventDefault();
+        swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this auctioneer!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            },
+            function(isConfirm){
+                if (isConfirm) {
+
+                    var url = "{{ asset('dashboard/blog') }}/" + slug;
+
+                    $.ajax({
+                        method: "DELETE",
+                        url: url,
+                        success: function(data){
+                            swal("Deleted!", "The auctioneer has been deleted.", "success");
+                            $(row).remove();
+                        },
+                        error: function(data){
+                            var errors = data;
+                            console.log(errors);
+                            swal("Error", errors, "error");
+                        }
+                    });
+                } else {
+                    swal("Cancelled", "", "error");
+                }
+            });
+    });
 </script>
 @endsection

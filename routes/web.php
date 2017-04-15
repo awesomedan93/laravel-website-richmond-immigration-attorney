@@ -1,5 +1,5 @@
 <?php
-
+//// FRONT END PAGES
 Route::group([
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
@@ -38,9 +38,10 @@ Route::group([
     Route::get('/testimonials', function () {
         return view('frontend.testimonials');
     });
-    Route::get('/blog', function () {
-        return view('frontend.blog');
-    });
+    Route::get('/blog', 'Frontend\PostController@index');
+
+    Route::get('/blog/{slug}', 'Frontend\PostController@show');
+
     Route::get('/contact', function () {
         return view('frontend.contact');
     });
@@ -49,12 +50,14 @@ Route::group([
     });
 });
 
-//// FRONT END PAGES
+//BACKEND
 
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('/dashboard/blog', 'Backend\PostController');
+
+    Route::delete('/dashboard/blog/post/{id}', 'Backend\PostController@destroy');
 
 });

@@ -7,6 +7,8 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
@@ -34,8 +36,8 @@ class PostController extends Controller
         ]);
 
         $inputData = $request->all();
+
         $inputData['author_id'] = Auth::user()->id;
-        $inputData['slug'] = str_slug($inputData['title'],'-');
 
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
         $inputData['published_at'] = $date->format('Y-m-d');
@@ -45,8 +47,24 @@ class PostController extends Controller
         $post->fill($inputData);
         $saved = $post->save();
 
+        if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
+        {
+            $image = $request->file('image');
+            $filename  = 'post_image.' . $image->getClientOriginalExtension();
+
+            if (!file_exists("postspics/$post->id")) {
+                mkdir("postspics/$post->id", 0777, true);
+            }
+            $path = public_path("postspics/$post->id/" . $filename);
+
+            Image::make($image->getRealPath())->resize(300, 220)->save($path);
+            $inputData['image'] = "postspics/$post->id/".$filename;
+        }
+
         if($saved){
             return redirect()->route('blog.index');
+        }else{
+            return redirect()->back()->withInput();
         }
 
     }
@@ -70,6 +88,22 @@ class PostController extends Controller
 
         $inputData = $request->all();
 
+        if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
+        {
+            $image = $request->file('image');
+            $filename  = 'post_image.' . $image->getClientOriginalExtension();
+
+            if (!file_exists("postspics/$id")) {
+                mkdir("postspics/$id", 0777, true);
+            }
+            $path = public_path("postspics/$id/" . $filename);
+
+
+            Image::make($image->getRealPath())->resize(300, 220)->save($path);
+            $inputData['image'] = "postspics/$id/".$filename;
+        }
+
+
         $inputData['author_id'] = Auth::user()->id;
 
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
@@ -84,8 +118,17 @@ class PostController extends Controller
         }
     }
 
-    public function show()
+    public function destroy($slug)
     {
+        try {
+            Post::where('slug', $slug)->delete();
 
+            return response()->json('',200);
+        }
+        catch (\Exception $e) {
+
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 403 );
+        }
     }
+
 }

@@ -580,6 +580,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 article p {
   margin: 10px 0px;
+  font:normal normal normal 20px/1.5em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
 }
 .article_image {
   float:right;
@@ -590,9 +591,9 @@ article p {
   float: right;
 }
 .article_title {
-  font: normal normal normal 40px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
+  font: normal normal normal 56px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
   text-decoration: none;
-  line-height: 27px;
+  line-height: 56px;
 }
 a.article_title:hover {
   text-decoration: underline;
