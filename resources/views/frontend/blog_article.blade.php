@@ -9,7 +9,9 @@
                     <span class="article_title">{{ $post->title }}</span><br>
                     <span class="">{{ $publishedAt }}</span>
                     <div class="article_content">
-                        <img src="img/article_image.png">
+                        @if(!empty($post->image))
+                            <img src="{{ asset($post->image) }}">
+                        @endif
                         <p>{!! $post->body !!}</p>
                     </div>
                 </article>

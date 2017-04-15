@@ -6,9 +6,10 @@
             <div class="blog_content">
                 @foreach($posts as $post)
                     <article>
-                        <a href="blog_article.html" class="article_title">{{ $post->title }}</a><br>
+                        <a href="{{ url('blog/'.$post->slug) }}" class="article_title">{{ $post->title }}</a><br>
                         <span class="">{{ $post->pulished_at }}</span>
                         <div class="article_content">
+
                             <div class="article_image">
                                 <img src="{{ asset('img/article_image.png') }}">
                             </div>
