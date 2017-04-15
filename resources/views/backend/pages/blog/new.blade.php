@@ -31,79 +31,110 @@
 
         <!-- Main content -->
         <section class="content">
-            <div class="row">
-                <form method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
+                <div class="row">
                     {{ csrf_field() }}
-                <div class="col-md-6">
-                    <div class="box box-info">
-                        <div class="box-header">
-                            <h3 class="box-title">General Information</h3>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body pad">
-
-                                {{ csrf_field() }}
+                    <div class="col-md-6">
+                        <div class="box box-info">
+                            <div class="box-header">
+                                <h3 class="box-title">English Content</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body pad">
                                 <div class="form-group">
                                     <label for="title">Post title</label>
-                                    <input type="text" class="form-control basic-usage" id="title" name="title" placeholder="Enter title" value="{{ old('title') }}">
+                                    <input type="text" class="form-control basic-usage" id="title" name="title_en" placeholder="Enter title" value="{{ old('title_en') }}">
 
                                 </div>
                                 <div class="form-group">
                                     <label for="title">Post slug</label>
-                                    <input type="text" class="form-control" id="permalink" name="slug" placeholder="Enter slug" value="{{ old('slug') }}">
+                                    <input type="text" class="form-control" id="permalink" name="slug_en" placeholder="Enter slug" value="{{ old('slug_en') }}">
                                 </div>
-                                <div class="form-group">
-                                    <label>Date:</label>
+                                <textarea id="editor1" name="body_en" rows="10" cols="80"></textarea>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col-->
+                    <div class="col-md-6">
+                        <div class="box box-info">
+                            <div class="box-header">
+                                <h3 class="box-title">General Information</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body pad">
 
-                                    <div class="input-group date">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
+                                    {{ csrf_field() }}
+
+                                    <div class="form-group">
+                                        <label>Date:</label>
+
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="datepicker" name="published_at">
                                         </div>
-                                        <input type="text" class="form-control pull-right" id="datepicker" name="published_at">
+                                        <!-- /.input group -->
                                     </div>
-                                    <!-- /.input group -->
-                                </div>
 
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">File input</label>
+                                        <input type="file" id="exampleInputFile" name="image">
+
+                                        <p class="help-block">Example block-level help text here.</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-xs-3">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="featured" value="0">
+                                                    <input type="checkbox" name="featured" value="1"> Make this post featured
+                                                </label>
+                                            </div>
+                                            <label>Status</label>
+                                            <select class="form-control" name="active">
+                                                <option value="1">Published</option>
+                                                <option value="0">Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
+
+
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col-->
+
+                </div>
+                <!-- ./row -->
+                <div class="row clearfix">
+                    <div class="col-md-6">
+                        <div class="box box-info">
+                            <div class="box-header">
+                                <h3 class="box-title">Spanish Content</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body pad">
                                 <div class="form-group">
-                                    <label for="exampleInputFile">File input</label>
-                                    <input type="file" id="exampleInputFile" name="image">
+                                    <label for="title">Post title</label>
+                                    <input type="text" class="form-control basic-usage2" id="title" name="title_es" placeholder="Enter title" value="{{ old('title_es') }}">
 
-                                    <p class="help-block">Example block-level help text here.</p>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group col-xs-3">
-                                        <label>Status</label>
-                                        <select class="form-control" name="active">
-                                            <option value="1">Published</option>
-                                            <option value="0">Inactive</option>
-                                        </select>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="title">Post slug</label>
+                                    <input type="text" class="form-control" id="permalink2" name="slug_es" placeholder="Enter slug" value="{{ old('slug_es') }}">
                                 </div>
-                            <button type="submit" class="btn btn-primary">Save</button>
-
-
+                                <textarea id="editor2" name="body_es" rows="10" cols="80">{{ old('body_es') }}</textarea>
+                            </div>
                         </div>
+                        <!-- /.box -->
                     </div>
-                    <!-- /.box -->
+                    <!-- /.col-->
                 </div>
-                <!-- /.col-->
-                <div class="col-md-6">
-                    <div class="box box-info">
-                        <div class="box-header">
-                            <h3 class="box-title">Post Content</h3>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body pad">
-                                <textarea id="editor1" name="body" rows="10" cols="80"></textarea>
-                        </div>
-                    </div>
-                    <!-- /.box -->
-                </div>
-                <!-- /.col-->
-
-                </form>
-            </div>
-            <!-- ./row -->
+            </form>
         </section>
         <!-- /.content -->
     </div>
@@ -132,9 +163,21 @@
             options: {},
             callback: false
         });
+        $(".basic-usage2").stringToSlug({
+            setEvents: 'keyup keydown blur',
+            getPut: '#permalink2',
+            space: '-',
+            prefix: '',
+            suffix: '',
+            replace: '',
+            AND: 'and',
+            options: {},
+            callback: false
+        });
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         CKEDITOR.replace('editor1');
+        CKEDITOR.replace('editor2');
 
         //Date picker
         $('#datepicker').datepicker({

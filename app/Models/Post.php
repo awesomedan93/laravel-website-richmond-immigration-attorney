@@ -1,10 +1,14 @@
 <?php namespace App\Models;
 
+use Dimsav\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['author_id','title','body','slug','active','image','published_at'];
+    use Translatable;
+
+    public $translatedAttributes = ['title','body','slug'];
+    protected $fillable = ['author_id','active','image','featured','published_at'];
 
 
 }

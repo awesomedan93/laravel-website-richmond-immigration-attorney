@@ -30,8 +30,9 @@
                         <table id="blog_list" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>id</th>
-                                <th>title</th>
+                                <th>Id</th>
+                                <th>English Title</th>
+                                <th>Spanish Title</th>
                                 <th>Status</th>
                                 <th>Published At</th>
                                 <th class="no-sort">Actions</th>
@@ -42,6 +43,7 @@
                                 <tr>
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->title }}</td>
+                                    <td>{{ $post->{'title:es'} }}</td>
                                     <td>
                                         @if($post->active == 1)
                                             Active
@@ -65,8 +67,9 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>id</th>
-                                <th>title</th>
+                                <th>Id</th>
+                                <th>English Title</th>
+                                <th>Spanish Title</th>
                                 <th>Status</th>
                                 <th>Published At</th>
                                 <th>Actions</th>

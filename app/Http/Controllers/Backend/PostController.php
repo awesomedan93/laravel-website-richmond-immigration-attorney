@@ -7,7 +7,6 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
@@ -28,15 +27,17 @@ class PostController extends Controller
     {
 
         $this->validate($request, [
-            'title' => 'required',
-            'slug' => 'required|unique:posts',
+            'title_en' => 'required',
+            //'slug_en' => 'required|unique:posts',
+            'slug_en' => 'required|unique:post_translations,slug',
+            'slug_es' => 'unique:post_translations,slug',
             'published_at' => 'required',
             'active' => 'required',
-            'body' => 'required'
+            'body_en' => 'required'
         ]);
 
         $inputData = $request->all();
-
+        //dd($inputData);
         $inputData['author_id'] = Auth::user()->id;
 
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
@@ -44,7 +45,19 @@ class PostController extends Controller
 
         $post = new Post();
 
-        $post->fill($inputData);
+        //$post->fill($inputData);
+        $post = $post->fill([
+            'published_at'=>$inputData['published_at'],
+            'author_id'=>$inputData['author_id'],
+            'active'=>$inputData['active'],
+            'en'  => ['slug'=>$inputData['slug_en'], 'title' => $inputData['title_en'],'body'=>$inputData['body_en']],
+            'es'  => [
+                'slug'  => !empty($inputData['slug_es']) ? $inputData['slug_es']:$inputData['slug_en'].'-es',
+                'title' => !empty($inputData['title_es'])? $inputData['title_es']:$inputData['title_en'],
+                'body'  => !empty($inputData['body_es']) ? $inputData['body_es']:$inputData['body_en']
+            ],
+        ]);
+
         $saved = $post->save();
 
         if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
@@ -79,11 +92,12 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'slug' => 'required|unique:posts,slug,' . $id,
+            'title_en' => 'required',
+            'slug_en' => 'required|unique:post_translations,slug,' . $id,
+            'slug_es' => 'unique:post_translations,slug,' . $id,
             'published_at' => 'required',
             'active' => 'required',
-            'body' => 'required'
+            'body_en' => 'required'
         ]);
 
         $inputData = $request->all();
@@ -103,13 +117,24 @@ class PostController extends Controller
             $inputData['image'] = "postspics/$id/".$filename;
         }
 
-
         $inputData['author_id'] = Auth::user()->id;
 
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
         $inputData['published_at'] = $date->format('Y-m-d');
 
-        $updated = Post::find($id)->update($inputData);
+        $post = Post::find($id);
+
+        $updated = $post->update([
+            'published_at'=>$inputData['published_at'],
+            'author_id'=>$inputData['author_id'],
+            'active'=>$inputData['active'],
+            'en'  => ['slug'=>$inputData['slug_en'], 'title' => $inputData['title_en'],'body'=>$inputData['body_en']],
+            'es'  => [
+                'slug'  => !empty($inputData['slug_es']) ? $inputData['slug_es']:$inputData['slug_en'],
+                'title' => !empty($inputData['title_es'])? $inputData['title_es']:$inputData['title_en'],
+                'body'  => !empty($inputData['body_es']) ? $inputData['body_es']:$inputData['body_en']
+            ],
+        ]);
 
         if($updated){
             return redirect()->route('blog.index');
