@@ -665,9 +665,9 @@ a.article_title:hover {
 .center {
     text-align: center;
 }
-.share_socials {
-  height: 45px;
-  background-color: green;
+.share_socials .rrssb-text {
+    font-size: 13.2px !important;
+    line-height: 32px;
 }
 .quote_icon {
   width: 67px;

@@ -1,4 +1,7 @@
 ﻿@extends('frontend.layouts.default')
+@section('custom-header')
+    <link rel="stylesheet" href="{{ asset('packages/rrssb/css/rrssb.css') }}" />
+@endsection
 @section('after-body')
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -25,9 +28,10 @@
                         <p>{!! $post->body !!}</p>
                     </div>
                 </article>
-                <div class="share_socials">
-
+                <div class="share_socials" style="font-family: helvetica, arial, sans-serif; ">
+                    @include('frontend.partials.socials')
                 </div>
+                <br>
                 <div class="fb-comments" data-width="100%" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
                 <div class="clear"></div>
 
@@ -61,3 +65,6 @@
         </div>
     </div>
 @stop
+@section('custom-footer-js')
+    <script src="{{ asset('packages/rrssb/js/rrssb.min.js') }}"></script>
+@endsection
