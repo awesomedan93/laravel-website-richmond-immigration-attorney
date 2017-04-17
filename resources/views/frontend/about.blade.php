@@ -1,4 +1,7 @@
 ﻿@extends('frontend.layouts.default')
+@section('header-custom-tags')
+
+@stop
 @section('content')
 <div class="container">
     <div class="about_us_left_block">

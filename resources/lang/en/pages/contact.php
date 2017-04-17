@@ -8,5 +8,5 @@ return [
     'phone' => 'Phone',
     'message' => 'Message',
     'send' => 'Send',
-    'agreed_terms_text' => '*By submitting this contact form, I have read & agreed to the <a href="{{ url(\'/terms-and-conditions\') }}">Terms & Conditions.</a>'
+    'agreed_terms_text' => '*By submitting this contact form, I have read & agreed to the <a href="'.url('/terms-and-conditions').'">Terms & Conditions.</a>'
 ];
