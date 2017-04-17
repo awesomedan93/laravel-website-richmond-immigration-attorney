@@ -45,11 +45,7 @@
         </ul>
         <!-- END: NAV -->
         <ul class="lang_switcher">
-            @if(App::getLocale() == 'es')
-                <li><a href="{{LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
-            @else
-                <li><a href="{{LaravelLocalization::getLocalizedURL('es') }}">Español</a></li>
-            @endif
+            @include('frontend.includes.language_switcher')
         </ul>
         <div class="responsive-menu-icon slide-menu-open">
             <div></div>

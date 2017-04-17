@@ -6,7 +6,7 @@ class PostTranslation extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = ['slug', 'title', 'body'];
+    protected $fillable = ['slug', 'title', 'body', 'locale'];
 
     public function post()
     {

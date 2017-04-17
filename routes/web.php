@@ -40,7 +40,7 @@ Route::group([
     });
     Route::get('/blog', 'Frontend\PostController@index');
 
-    Route::get('/blog/{slug}', 'Frontend\PostController@show');
+    Route::get('/blog/{slug}', 'Frontend\PostController@show')->name('blog.post');
 
     Route::get('/contact', function () {
         return view('frontend.contact');
