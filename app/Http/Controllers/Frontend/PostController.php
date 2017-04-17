@@ -16,7 +16,7 @@ class PostController extends Controller
     {
         $posts = PostTranslation::where('locale',App::getLocale())->whereHas('post',function($q){
             $q->where('active',1);
-        })->get();
+        })->paginate(2);
 
         return view('frontend.blog')->with('posts',$posts);
     }

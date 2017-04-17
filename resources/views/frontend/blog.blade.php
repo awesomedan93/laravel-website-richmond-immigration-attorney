@@ -4,17 +4,21 @@
         <div class="container">
             <br>
             <div class="blog_content">
-                @foreach($posts as $post)
+                @foreach($posts as $postTranslation)
+
                     <article>
-                        <a href="{{ url('blog/'.$post->slug) }}" class="article_title">{{ $post->title }}</a><br>
-                        <span class="">{{ $post->pulished_at }}</span>
+                        
+                        <a href="{{ url('blog/'.$postTranslation->slug) }}" class="article_title">{{ $postTranslation->title }}</a><br>
+                        <span class="">{{ $postTranslation->pulished_at }}</span>
                         <div class="article_content">
 
                             <div class="article_image">
-                                <img src="{{ asset('img/article_image.png') }}">
+                                @if(!empty($postTranslation->post->image))
+                                    <img src="{{ asset($postTranslation->post->image) }}">
+                                @endif
                             </div>
                             <p>
-                                {!! excerpt(strip_tags($post->body)) !!}
+                                {!! excerpt(strip_tags($postTranslation->body)) !!}
                                 <div class="clear"></div>
                                 <a href="blog_article.html" class="button read_more float_left">Read more</a>
                             </p>
@@ -23,17 +27,9 @@
                     </article>
                 @endforeach
                 <div class="clear"></div>
+
                 <div class="center">
-                    <div class="pagination">
-                        <a href="#">&laquo;</a>
-                        <a href="#" class="article_active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">&raquo;</a>
-                    </div>
+                    @include('frontend.partials.pagination', ['paginator' => $posts])
                 </div>
             </div>
             <div class="sidebar">

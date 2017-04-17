@@ -71,7 +71,8 @@ class PostController extends Controller
             $path = public_path("postspics/$post->id/" . $filename);
 
             Image::make($image->getRealPath())->resize(300, 220)->save($path);
-            $inputData['image'] = "postspics/$post->id/".$filename;
+            $imagePath = "postspics/$post->id/".$filename;
+            $post->update(['image'=>$imagePath]);
         }
 
         if($saved){
@@ -143,10 +144,10 @@ class PostController extends Controller
         }
     }
 
-    public function destroy($slug)
+    public function destroy($id)
     {
         try {
-            Post::where('slug', $slug)->delete();
+            Post::where('id', $id)->delete();
 
             return response()->json('',200);
         }

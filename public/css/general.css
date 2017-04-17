@@ -582,6 +582,9 @@ article p {
   margin: 10px 0px;
   font:normal normal normal 20px/1.5em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
 }
+.blog_content article > a {
+    word-wrap: break-word;
+}
 .article_image {
   float:right;
     width:55%;
@@ -650,10 +653,15 @@ a.article_title:hover {
 .pagination {
     display: inline-block;
 }
-
-.pagination a {
-    color: black;
+.pagination li {
     float: left;
+    border-radius: 5px;
+}
+.pagination li.active {
+    background-color: #2E529C;
+}
+.pagination li a {
+    color: black;
     padding: 4px 10px;
     text-decoration: none;
     font:normal normal normal 16px/1.55em 'open sans',sans-serif;
