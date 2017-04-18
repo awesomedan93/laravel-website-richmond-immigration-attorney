@@ -41,15 +41,15 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="metaTitle">Meta Title</label>
-                                    <input type="text" class="form-control" id="metaTitle" name="title_en" placeholder="No title defined">
+                                    <input type="text" class="form-control" id="metaTitle" name="title_en" value="{{ $page->title_en }}" placeholder="No title defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaKeywords">Meta Keywords</label>
-                                    <input type="text" class="form-control" id="metaKeywords" name="keywords_en" placeholder="No keywords defined">
+                                    <input type="text" class="form-control" id="metaKeywords" name="keywords_en" value="{{ $page->keywords_en }}" placeholder="No keywords defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaDescription">Meta Description</label>
-                                    <input type="text" class="form-control" id="metaDescription" name="description_en" placeholder="No description filled">
+                                    <input type="text" class="form-control" id="metaDescription" name="description_en" value="{{ $page->description_en }}" placeholder="No description filled">
                                 </div>
 
                             </div>
@@ -71,15 +71,15 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="metaTitle">Meta Title</label>
-                                    <input type="text" class="form-control" id="metaTitle" name="title_es" placeholder="No title defined">
+                                    <input type="text" class="form-control" id="metaTitle" name="title_es"  value="{{ $page->title_es }}" placeholder="No title defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaKeywords">Meta Keywords</label>
-                                    <input type="text" class="form-control" id="metaKeywords" name="keywords_es" placeholder="No keywords defined">
+                                    <input type="text" class="form-control" id="metaKeywords" name="keywords_es" value="{{ $page->keywords_es }}"  placeholder="No keywords defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaDescription">Meta Description</label>
-                                    <input type="text" class="form-control" id="metaDescription" name="description_es" placeholder="No description filled">
+                                    <input type="text" class="form-control" id="metaDescription" name="description_es" value="{{ $page->description_es }}" placeholder="No description filled">
                                 </div>
                             </div>
                             <!-- /.box-body -->
