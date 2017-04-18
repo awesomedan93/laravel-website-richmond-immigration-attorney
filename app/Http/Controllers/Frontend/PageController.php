@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Page;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 class PageController extends Controller
@@ -24,62 +26,106 @@ class PageController extends Controller
      */
     public function show()
     {
-        $page = Route::currentRouteName();
+        $routeName = Route::currentRouteName();
 
-        switch ($page) {
+
+        switch ($routeName) {
             case "pages.home":
-                return view('frontend.index');
+
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.index',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.about":
-                return view('frontend.about');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.about',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.cases":
-                return view('frontend.cases');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.cases',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.cases.criminal_defense":
-                return view('frontend.case_criminal_defense');
+
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.case_criminal_defense',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.cases.immigration_law":
-                return view('frontend.case_immigration_law');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.case_immigration_law',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.cases.traffic_law":
-                return view('frontend.case_traffic_law');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.case_traffic_law',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.cases.dui_law":
-                return view('frontend.case_dui_law');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.case_dui_law',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.attorneys":
-                return view('frontend.attorneys');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.attorneys',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.raul_novo":
-                return view('frontend.lawyer');
+
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.lawyer',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.soulmaz_taghavi":
-                return view('frontend.lawyer2');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.lawyer2',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.testimonials":
-                return view('frontend.testimonials');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.testimonials',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.contact":
-                return view('frontend.contact');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.contact',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.terms_and_conditions":
-                return view('frontend.terms-and-conditions');
+                $page = new Page();
+                $metaTags = $page->getMetaTags($routeName);
+
+                return view('frontend.terms-and-conditions',['metaTags'=>$metaTags]);
                 break;
             default:
-                return view('frontend.index');
+
+                return view('frontend.index',['metaTags'=>$metaTags]);
         }
     }
 }

@@ -12,19 +12,19 @@ class PagesTableSeeder extends Seeder
     public function run()
     {
         $pages = [
-            ['key'=>'home'],
-            ['key'=>'about'],
-            ['key'=>'cases'],
-            ['key'=>'cases-criminal-defense'],
-            ['key'=>'cases-immigration-law'],
-            ['key'=>'cases-traffic-law'],
-            ['key'=>'cases-dui-law'],
-            ['key'=>'attorneys'],
-            ['key'=>'attorneys-raul-novo'],
-            ['key'=>'attorneys-soulmaz-taghavi'],
-            ['key'=>'testimonials'],
-            ['key'=>'blog'],
-            ['key'=>'contact']
+            ['key'=>'pages.home','menu_title'=>'Home'],
+            ['key'=>'pages.about','menu_title'=>'About'],
+            ['key'=>'pages.cases','menu_title'=>'Cases We Handle'],
+            ['key'=>'pages.cases.criminal_defense','menu_title'=>'Criminal Defense'],
+            ['key'=>'pages.cases.immigration_law','menu_title'=>'Immigration Law'],
+            ['key'=>'pages.cases.traffic_law','menu_title'=>'Traffic Law'],
+            ['key'=>'pages.cases.dui_law','menu_title'=>'Dui Law'],
+            ['key'=>'pages.attorneys','menu_title'=>'Attorneys'],
+            ['key'=>'pages.raul_novo','menu_title'=>'Raul Novo'],
+            ['key'=>'pages.soulmaz_taghavi','menu_title'=>'Soulmaz Taghavi'],
+            ['key'=>'pages.testimonials','menu_title'=>'Testimonials'],
+            ['key'=>'pages.blog','menu_title'=>'Blog'],
+            ['key'=>'pages.contact','menu_title'=>'Contact']
         ];
 
         foreach ($pages as $key=>$value){

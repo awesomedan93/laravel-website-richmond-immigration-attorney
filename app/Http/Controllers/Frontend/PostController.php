@@ -18,7 +18,15 @@ class PostController extends Controller
             $q->where('active',1);
         })->paginate(2);
 
-        return view('frontend.blog')->with('posts',$posts);
+        $latest = PostTranslation::where('locale',App::getLocale())->whereHas('post',function($q){
+            $q->where('active',1)->orderBy('published_at', 'desc');
+        })->take(2)->get();
+
+        $featured = PostTranslation::where('locale',App::getLocale())->whereHas('post',function($q){
+            $q->where('active',1)->where('featured',1)->orderBy('published_at', 'desc');
+        })->take(2)->get();
+
+        return view('frontend.blog',['posts'=>$posts,'latest'=>$latest, 'featured'=>$featured]);
     }
 
     public function show($slug)

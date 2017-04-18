@@ -92,16 +92,20 @@ class PostController extends Controller
 
     public function update(Request $request, $id)
     {
+
+        $inputData = $request->all();
+        $post = Post::find($id);
+
         $this->validate($request, [
             'title_en' => 'required',
-            'slug_en' => 'required|unique:post_translations,slug,' . $id,
-            'slug_es' => 'unique:post_translations,slug,' . $id,
+            'slug_en' => 'required|unique:post_translations,slug,' . $post->translations->toArray()[0]['id'],
+            'slug_es' => 'unique:post_translations,slug,' . $post->translations->toArray()[1]['id'],
             'published_at' => 'required',
             'active' => 'required',
             'body_en' => 'required'
         ]);
 
-        $inputData = $request->all();
+
 
         if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
         {
@@ -123,7 +127,7 @@ class PostController extends Controller
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
         $inputData['published_at'] = $date->format('Y-m-d');
 
-        $post = Post::find($id);
+
 
         $updated = $post->update([
             'published_at'=>$inputData['published_at'],

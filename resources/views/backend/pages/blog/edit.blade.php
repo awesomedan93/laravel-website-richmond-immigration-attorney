@@ -9,13 +9,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Text Editors
-                <small>Advanced form element</small>
+                Edit Post
+
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Forms</a></li>
-                <li class="active">Editors</li>
+                <li><a href="#"><i class="fa fa-dashboard"></i> Blog</a></li>
+                <li class="active">Edit post</li>
             </ol>
             <br>
             @if (count($errors) > 0)
@@ -69,7 +68,7 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group">
-                                        <label>Date:</label>
+                                        <label>Published At:</label>
 
                                         <div class="input-group date">
                                             <div class="input-group-addon">

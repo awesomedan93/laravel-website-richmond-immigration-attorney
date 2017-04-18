@@ -13,9 +13,8 @@
                 <small>Advanced form element</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Forms</a></li>
-                <li class="active">Editors</li>
+                <li><a href="#"><i class="fa fa-dashboard"></i> Blog</a></li>
+                <li class="active">Create Post</li>
             </ol>
             <br>
             @if (count($errors) > 0)

@@ -8,14 +8,9 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                {{ $page->title_en }}
+                {{ $page->menu_title }}
                 <small>SEO tags</small>
             </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Forms</a></li>
-                <li class="active">Editors</li>
-            </ol>
             <br>
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
@@ -46,15 +41,15 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="metaTitle">Meta Title</label>
-                                    <input type="email" class="form-control" id="metaTitle" placeholder="No title defined">
+                                    <input type="text" class="form-control" id="metaTitle" name="title_en" placeholder="No title defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaKeywords">Meta Keywords</label>
-                                    <input type="email" class="form-control" id="metaKeywords" placeholder="No keywords defined">
+                                    <input type="text" class="form-control" id="metaKeywords" name="keywords_en" placeholder="No keywords defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaDescription">Meta Description</label>
-                                    <input type="email" class="form-control" id="metaDescription" placeholder="No description filled">
+                                    <input type="text" class="form-control" id="metaDescription" name="description_en" placeholder="No description filled">
                                 </div>
 
                             </div>
@@ -76,15 +71,15 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="metaTitle">Meta Title</label>
-                                    <input type="email" class="form-control" id="metaTitle" placeholder="No title defined">
+                                    <input type="text" class="form-control" id="metaTitle" name="title_es" placeholder="No title defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaKeywords">Meta Keywords</label>
-                                    <input type="email" class="form-control" id="metaKeywords" placeholder="No keywords defined">
+                                    <input type="text" class="form-control" id="metaKeywords" name="keywords_es" placeholder="No keywords defined">
                                 </div>
                                 <div class="form-group">
                                     <label for="metaDescription">Meta Description</label>
-                                    <input type="email" class="form-control" id="metaDescription" placeholder="No description filled">
+                                    <input type="text" class="form-control" id="metaDescription" name="description_es" placeholder="No description filled">
                                 </div>
                             </div>
                             <!-- /.box-body -->

@@ -7,11 +7,9 @@
     <section class="content-header">
         <h1>
             Blog Posts
-            <small>Show all posts</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Blog</a></li>
-
             <li class="active">Show all posts</li>
         </ol>
     </section>
@@ -23,7 +21,7 @@
 
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Auctioneers list</h3>
+                        <h3 class="box-title">Posts</h3>
                         <a href="{{ route('blog.create') }}" role="button" class="btn btn-success btn-md pull-right">Create</a>
                     </div>
                     <div class="box-body">
