@@ -50,6 +50,7 @@ class PostController extends Controller
             'published_at'=>$inputData['published_at'],
             'author_id'=>$inputData['author_id'],
             'active'=>$inputData['active'],
+            'featured'=>$inputData['featured'],
             'en'  => ['slug'=>$inputData['slug_en'], 'title' => $inputData['title_en'],'body'=>$inputData['body_en']],
             'es'  => [
                 'slug'  => !empty($inputData['slug_es']) ? $inputData['slug_es']:$inputData['slug_en'].'-es',
@@ -133,6 +134,7 @@ class PostController extends Controller
             'published_at'=>$inputData['published_at'],
             'author_id'=>$inputData['author_id'],
             'active'=>$inputData['active'],
+            'featured'=>$inputData['featured'],
             'en'  => ['slug'=>$inputData['slug_en'], 'title' => $inputData['title_en'],'body'=>$inputData['body_en']],
             'es'  => [
                 'slug'  => !empty($inputData['slug_es']) ? $inputData['slug_es']:$inputData['slug_en'],
