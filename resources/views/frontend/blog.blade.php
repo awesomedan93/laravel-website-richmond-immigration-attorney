@@ -42,11 +42,13 @@
                     Featured Posts
                 </span>
                     @foreach($featured as $post)
+                    <a href="{{ url('blog/'.$post->slug) }}">
                         @if(!empty($post->post->image))
                             <img src="{{ asset($post->post->image) }}">
                         @endif
-                    <p>{!! excerpt(strip_tags($post->body)) !!}</p>
-                    <span class="">{{ convertTime($post->post->published_at) }}</span>
+                        <p>{!! excerpt(strip_tags($post->body)) !!}</p>
+                        <span class="">{{ convertTime($post->post->published_at) }}</span>
+                    </a>
                     @endforeach
                 </div>
 
@@ -55,11 +57,13 @@
                     Recent Posts
                 </span>
                     @foreach($latest as $post)
-                        @if(!empty($post->post->image))
-                            <img src="{{ asset($post->post->image) }}">
-                        @endif
-                        <p>{!! excerpt(strip_tags($post->body)) !!}</p>
-                        <span class="">{{ convertTime($post->post->published_at) }}</span>
+                        <a href="{{ url('blog/'.$post->slug) }}">
+                            @if(!empty($post->post->image))
+                                <img src="{{ asset($post->post->image) }}">
+                            @endif
+                            <p>{!! excerpt(strip_tags($post->body)) !!}</p>
+                            <span class="">{{ convertTime($post->post->published_at) }}</span>
+                        </a>
                     @endforeach
                 </div>
             </div>

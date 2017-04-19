@@ -636,6 +636,12 @@ a.article_title:hover {
   margin: 0px;
   line-height: 20px;
 }
+.widget a {
+    text-decoration: none;
+}
+.widget a:hover {
+    text-decoration: underline;
+}
 .widget_title {
     font: normal normal normal 25px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
   text-decoration: none;
