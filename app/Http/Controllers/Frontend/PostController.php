@@ -31,6 +31,13 @@ class PostController extends Controller
 
     public function show($slug)
     {
+        $latest = PostTranslation::where('locale',App::getLocale())->whereHas('post',function($q){
+            $q->where('active',1)->orderBy('published_at', 'desc');
+        })->take(2)->get();
+
+        $featured = PostTranslation::where('locale',App::getLocale())->whereHas('post',function($q){
+            $q->where('active',1)->where('featured',1)->orderBy('published_at', 'desc');
+        })->take(2)->get();
 
         $post = PostTranslation::where('locale',App::getLocale())->where('slug',$slug)->whereHas('post',function($q){
             $q->where('active',1);
@@ -50,7 +57,9 @@ class PostController extends Controller
                 'post'=>$post,
                 'publishedAt'=>$publishedAt,
                 'anotherLangPost' => $anotherLangPost,
-                'translatedPostUrl' => $translatedPostUrl
+                'translatedPostUrl' => $translatedPostUrl,
+                'latest'=>$latest,
+                'featured'=>$featured
             ]);
     }
 }
