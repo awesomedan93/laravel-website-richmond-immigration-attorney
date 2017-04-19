@@ -41,24 +41,30 @@
                 <span class="widget_title">
                     Featured Posts
                 </span>
-                    <img src="img/article_image.png">
-                    <p>
-                        Deportation threat strikes fear in county’s growing Latino population
-
-                    </p>
-                    <span class="">March 27, 2017</span>
+                    @foreach($featured as $post)
+                        <a href="{{ url('blog/'.$post->slug) }}">
+                            @if(!empty($post->post->image))
+                                <img src="{{ asset($post->post->image) }}">
+                            @endif
+                            <p>{!! excerpt(strip_tags($post->body)) !!}</p>
+                            <span class="">{{ convertTime($post->post->published_at) }}</span>
+                        </a>
+                    @endforeach
                 </div>
 
                 <div class="widget">
                 <span class="widget_title">
                     Recent Posts
                 </span>
-                    <img src="img/article_image.png">
-                    <p>
-                        Deportation threat strikes fear in county’s growing Latino population
-
-                    </p>
-                    <span class="">March 27, 2017</span>
+                    @foreach($latest as $post)
+                        <a href="{{ url('blog/'.$post->slug) }}">
+                            @if(!empty($post->post->image))
+                                <img src="{{ asset($post->post->image) }}">
+                            @endif
+                            <p>{!! excerpt(strip_tags($post->body)) !!}</p>
+                            <span class="">{{ convertTime($post->post->published_at) }}</span>
+                        </a>
+                    @endforeach
                 </div>
             </div>
             <div class="clear"></div>
