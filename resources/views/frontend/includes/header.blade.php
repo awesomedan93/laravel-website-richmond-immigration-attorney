@@ -2,7 +2,9 @@
 <header class="header">
     <div class="container">
 
-        <a href="{{ url('/') }}"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"></a>
+        <a href="{{ url('/') }}" class="logo_href"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"><br><span>RichmondImmigrationAttorney.com</span>
+        </a>
+
         <div class="socials">
             <span class="tel"><a href="tel:(804) 614-6920">(804) 614-6920</a></span><br>
             <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('img/icons/g+.png') }}"></a>

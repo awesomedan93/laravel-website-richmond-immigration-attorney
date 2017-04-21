@@ -373,6 +373,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 .tel a {
     text-decoration: none;
+    font-size:18px;
 }
 .tel a:hover {
     text-decoration: underline;
@@ -735,4 +736,11 @@ a.article_title:hover {
 }
 .testimonials_list p {
     margin-bottom: 5px;
+}
+.logo_href{
+    float:left;
+    text-align: center;
+}
+.logo_href {
+    text-decoration: none;
 }
