@@ -171,7 +171,7 @@ class PostController extends Controller
                 //$removed = Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
 
                 $removed = rmdir( "postspics".DIRECTORY_SEPARATOR."$id" );
-                dd($removed);
+
                 if($removed){
                     $dataForUpdate['image'] = NULL;
                 }
