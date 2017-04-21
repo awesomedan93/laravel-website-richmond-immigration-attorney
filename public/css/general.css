@@ -597,9 +597,13 @@ article p {
   font: normal normal normal 56px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
   text-decoration: none;
   line-height: 56px;
+  word-wrap: break-word;
 }
 a.article_title:hover {
   text-decoration: underline;
+}
+.widget_post_title {
+    word-wrap: break-word;
 }
 .read_more {
   background-color: #2E529C;

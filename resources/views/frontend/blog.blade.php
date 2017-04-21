@@ -46,7 +46,7 @@
                         @if(!empty($post->post->image))
                             <img src="{{ asset($post->post->image) }}">
                         @endif
-                        <p>{!! excerpt(strip_tags($post->body)) !!}</p>
+                        <p class="widget_post_title">{{ $post->title }}</p>
                         <span class="">{{ convertTime($post->post->published_at) }}</span>
                     </a>
                     @endforeach
@@ -61,7 +61,7 @@
                             @if(!empty($post->post->image))
                                 <img src="{{ asset($post->post->image) }}">
                             @endif
-                            <p>{!! excerpt(strip_tags($post->body)) !!}</p>
+                            <p class="widget_post_title">{{ $post->title }}</p>
                             <span class="">{{ convertTime($post->post->published_at) }}</span>
                         </a>
                     @endforeach

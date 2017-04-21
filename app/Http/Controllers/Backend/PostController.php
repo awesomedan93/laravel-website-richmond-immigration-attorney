@@ -76,7 +76,14 @@ class PostController extends Controller
             }
             $path = public_path("postspics/$post->id/" . $filename);
 
-            Image::make($image->getRealPath())->resize(300, 220)->save($path);
+            $width = 250; // your max width
+            $height = 180; // your max height
+            $img = Image::make($image->getRealPath());
+            $img->height() > $img->width() ? $width=null : $height=null;
+            $img->resize($width, $height, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($path);
+
             $imagePath = "postspics/$post->id/".$filename;
             $post->update(['image'=>$imagePath]);
         }
@@ -133,6 +140,10 @@ class PostController extends Controller
 
         if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
         {
+            if (file_exists($post->image)) {
+                File::cleanDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+                Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+            }
             ini_set('memory_limit','256M');
             $image = $request->file('image');
             $filename  = 'post_image.' . $image->getClientOriginalExtension();
@@ -142,15 +153,23 @@ class PostController extends Controller
             }
             $path = public_path("postspics".DIRECTORY_SEPARATOR."$id".DIRECTORY_SEPARATOR . $filename);
 
-            Image::make($image->getRealPath())->resize(300, 220)->save($path);
+            $width = 250; // your max width
+            $height = 180; // your max height
+            $img = Image::make($image->getRealPath());
+            $img->height() > $img->width() ? $width=null : $height=null;
+            $img->resize($width, $height, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($path);
             $dataForUpdate['image'] = "postspics".DIRECTORY_SEPARATOR."$id".DIRECTORY_SEPARATOR.$filename;
         }
         if($request->input('image_remove') != NULL){
 
             if (file_exists($post->image)) {
                 ini_set('memory_limit','256M');
-                File::cleanDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
-                Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+                $cleaned = File::cleanDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+
+                //$removed = Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+
                 $removed = rmdir( "postspics".DIRECTORY_SEPARATOR."$id" );
                 if($removed){
                     $dataForUpdate['image'] = NULL;
