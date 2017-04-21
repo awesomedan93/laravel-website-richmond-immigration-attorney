@@ -72,5 +72,20 @@
     </div>
 @stop
 @section('custom-footer-js')
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $('.rrssb-buttons').rrssb({
+                // required:
+                title: '{{ $post->title }}',
+                url: '{{ Request::url() }}',
+
+                // optional:
+                description: '{!! excerpt(strip_tags($post->body)) !!}'
+//                emailBody: 'Usually email body is just the description + url, but you can customize it if you want'
+            });
+
+        });
+    </script>
     <script src="{{ asset('packages/rrssb/js/rrssb.min.js') }}"></script>
 @endsection
