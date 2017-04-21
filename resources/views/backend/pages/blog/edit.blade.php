@@ -81,10 +81,21 @@
 
 
                                     <div class="form-group">
-                                        <label for="exampleInputFile">File input</label>
-                                        <input type="file" id="exampleInputFile" name="image">
 
-                                        <p class="help-block">Example block-level help text here.</p>
+                                        <label for="postImage">Post image</label><div class="clear"></div>
+                                        <input type="file" id="postImage" name="image" value="" onchange="readURL(this);"><button id="remove_image">Clear</button>
+                                        {{--<input type="hidden" name="image_remove" value="0">--}}
+
+                                        <span id="formImage">
+                                            @if(!empty($post->image))
+                                                <img src="{{ asset($post->image) }}" width="200px" height="auto">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="image_remove"> Remove Image
+                                                    </label>
+                                                </div>
+                                            @endif
+                                        </span>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-xs-3">
@@ -155,7 +166,33 @@
 <script src="{{ asset('plugins/stringToSlug/jquery.stringtoslug.min.js') }}"></script>
 
 <script>
-$(function () {
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                image = '<img id="theImg" width="150" height="auto" src="'+e.target.result+'" >';
+                if($('#formImage img').length > 0){
+                    $('#formImage img').remove();
+                }
+                $('#formImage').prepend(image);
+                //$( "input[name='image_remove']" ).val(0);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        }else if($('#formImage img').length > 0){
+            $('#formImage img').remove();
+        }
+    }
+
+    $(function () {
+        $('#remove_image').click(function (e) {
+            e.preventDefault();
+            $('#postImage').val('');
+            $('#formImage img').remove();
+
+        });
     $(".basic-usage").stringToSlug({
         setEvents: 'keyup keydown blur',
         getPut: '#permalink',

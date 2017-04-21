@@ -4943,3 +4943,10 @@ table.text-center th {
 .margin-left {
   margin-left: 20px;
 }
+#postImage {
+  display: inline-block;
+}
+#formImage{
+  display: block;
+  margin-top: 15px;
+}

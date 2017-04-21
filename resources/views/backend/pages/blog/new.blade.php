@@ -78,11 +78,14 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputFile">File input</label>
-                                        <input type="file" id="exampleInputFile" name="image">
+                                        <label for="postImage">Post image</label><div class="clear"></div>
+                                        <input type="file" id="postImage" name="image" value="" onchange="readURL(this);"><button id="remove_image">Clear</button>
 
-                                        <p class="help-block">Example block-level help text here.</p>
+                                        <span id="formImage">
+
+                                        </span>
                                     </div>
+
                                     <div class="row">
                                         <div class="form-group col-xs-3">
                                             <div class="checkbox">
@@ -150,7 +153,30 @@
 <script src="{{ asset('plugins/stringToSlug/jquery.stringtoslug.min.js') }}"></script>
 
 <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                image = '<img width="200px" height="auto" src="'+e.target.result+'" >';
+                $('#formImage').prepend(image);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        }else if($('#formImage img').length > 0){
+            $('#formImage img').remove();
+        }
+    }
+
     $(function () {
+
+        $('#remove_image').click(function (e) {
+            e.preventDefault();
+            $('#postImage').val('');
+            $('#formImage img').remove();
+
+        });
         $(".basic-usage").stringToSlug({
             setEvents: 'keyup keydown blur',
             getPut: '#permalink',

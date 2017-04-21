@@ -7,7 +7,11 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Psr\Log\InvalidArgumentException;
+use Symfony\Component\Finder\Iterator\RecursiveDirectoryIterator;
 
 class PostController extends Controller
 {
@@ -28,16 +32,16 @@ class PostController extends Controller
 
         $this->validate($request, [
             'title_en' => 'required',
-            //'slug_en' => 'required|unique:posts',
             'slug_en' => 'required|unique:post_translations,slug',
             'slug_es' => 'unique:post_translations,slug',
             'published_at' => 'required',
             'active' => 'required',
-            'body_en' => 'required'
+            'body_en' => 'required',
+            'image' =>'image'
         ]);
 
         $inputData = $request->all();
-        //dd($inputData);
+
         $inputData['author_id'] = Auth::user()->id;
 
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
@@ -103,36 +107,19 @@ class PostController extends Controller
             'slug_es' => 'unique:post_translations,slug,' . $post->translations->toArray()[1]['id'],
             'published_at' => 'required',
             'active' => 'required',
-            'body_en' => 'required'
+            'body_en' => 'required',
+            'image' =>'image'
         ]);
-
-
-
-        if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
-        {
-            $image = $request->file('image');
-            $filename  = 'post_image.' . $image->getClientOriginalExtension();
-
-            if (!file_exists("postspics/$id")) {
-                mkdir("postspics/$id", 0777, true);
-            }
-            $path = public_path("postspics/$id/" . $filename);
-
-
-            Image::make($image->getRealPath())->resize(300, 220)->save($path);
-            $inputData['image'] = "postspics/$id/".$filename;
-        }
 
         $inputData['author_id'] = Auth::user()->id;
 
         $date = \DateTime::createFromFormat('m/d/Y', $inputData['published_at']);
         $inputData['published_at'] = $date->format('Y-m-d');
 
-
-
-        $updated = $post->update([
+        $dataForUpdate = [
             'published_at'=>$inputData['published_at'],
             'author_id'=>$inputData['author_id'],
+
             'active'=>$inputData['active'],
             'featured'=>$inputData['featured'],
             'en'  => ['slug'=>$inputData['slug_en'], 'title' => $inputData['title_en'],'body'=>$inputData['body_en']],
@@ -141,7 +128,34 @@ class PostController extends Controller
                 'title' => !empty($inputData['title_es'])? $inputData['title_es']:$inputData['title_en'],
                 'body'  => !empty($inputData['body_es']) ? $inputData['body_es']:$inputData['body_en']
             ],
-        ]);
+        ];
+
+        if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
+        {
+            $image = $request->file('image');
+            $filename  = 'post_image.' . $image->getClientOriginalExtension();
+
+            if (!file_exists("postspics".DIRECTORY_SEPARATOR."$id")) {
+                mkdir("postspics".DIRECTORY_SEPARATOR."$id", 0777, true);
+            }
+            $path = public_path("postspics".DIRECTORY_SEPARATOR."$id".DIRECTORY_SEPARATOR . $filename);
+
+            Image::make($image->getRealPath())->resize(300, 220)->save($path);
+            $dataForUpdate['image'] = "postspics".DIRECTORY_SEPARATOR."$id".DIRECTORY_SEPARATOR.$filename;
+        }
+        if($request->input('image_remove') != NULL){
+
+            if (file_exists($post->image)) {
+
+                File::cleanDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+                Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
+                $removed = rmdir( "postspics".DIRECTORY_SEPARATOR."$id" );
+                if($removed){
+                    $dataForUpdate['image'] = NULL;
+                }
+            }
+        }
+        $updated = $post->update($dataForUpdate);
 
         if($updated){
             return redirect()->route('blog.index');
@@ -163,4 +177,18 @@ class PostController extends Controller
         }
     }
 
+    public static function deleteDir($dirPath) {
+        $dir = 'samples' . DIRECTORY_SEPARATOR . 'sampledirtree';
+        $it = new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS);
+        $files = new \RecursiveIteratorIterator($it,
+            \RecursiveIteratorIterator::CHILD_FIRST);
+        foreach($files as $file) {
+            if ($file->isDir()){
+                rmdir($file->getRealPath());
+            } else {
+                unlink($file->getRealPath());
+            }
+        }
+        return rmdir($dir);
+    }
 }

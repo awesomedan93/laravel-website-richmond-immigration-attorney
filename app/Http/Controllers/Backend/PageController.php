@@ -18,6 +18,14 @@ class PageController extends Controller
 
     public function update(Request $request, $key)
     {
+        $this->validate($request, [
+            'title_en' => 'max:600',
+            'keywords_en' => 'max:600',
+            'description_en' => 'max:600',
+            'title_es' => 'max:600',
+            'keywords_es' => 'max:600',
+            'description_es' => 'max:600',
+        ]);
 
         $inputData = $request->except(['_token']);
 
