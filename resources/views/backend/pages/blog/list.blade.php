@@ -102,7 +102,7 @@
             "order": [],
             "columnDefs": [ {
                 "targets"  : 'no-sort',
-                "orderable": false,"width": "20%"
+                "orderable": false
             }]
         });
     });
