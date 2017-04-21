@@ -23,6 +23,8 @@ Route::group([
 
     Route::get('/contact', 'Frontend\PageController@show')->name('pages.contact');
     Route::get('/terms-and-conditions', 'Frontend\PostController@show')->name('pages.terms_and_conditions');
+
+    Route::post('/contact', ['as' => 'contact_us', 'uses' => 'Frontend\PageController@sendEmail']);
 });
 
 //BACKEND

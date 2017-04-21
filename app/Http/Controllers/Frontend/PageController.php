@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Page;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 class PageController extends Controller
@@ -127,5 +129,22 @@ class PageController extends Controller
 
                 return view('frontend.index',['metaTags'=>$metaTags]);
         }
+    }
+
+    public function sendEmail(Request $request)
+    {
+        $inputData = $request->all();
+
+        $to = "musteata.daniel@yahoo.com";
+        $headers = "From: info@staging.richmondimmigrationattorney.com";
+        $msg = 'Message: '.$inputData['message']. "\n".'Phone: '.$inputData['phone'];
+        $success = mail($to,$inputData['firstname'],$msg,$headers);
+
+        if($success){
+            $request->session()->flash('alert-success', 'Email has been sent!');
+        }else{
+            $request->session()->flash('alert-danger', 'Something wrong!');
+        }
+        return Redirect::to('/contact#message');
     }
 }

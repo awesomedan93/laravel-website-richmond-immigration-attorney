@@ -10,7 +10,20 @@
             <br><br><br>
             <div class="contact_form contact_form_page">
 
-                <form class="text_align_left">
+                <div class="flash-message">
+
+                    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+                        @if(Session::has('alert-' . $msg))
+
+                            <div class="alert alert-{{ $msg }} fade in alert-dismissable" style="margin-top:18px;">
+                                <strong>{{ Session::get('alert-' . $msg) }}!</strong>
+                            </div>
+                        @endif
+                    @endforeach
+
+                </div> <!-- end .flash-message -->
+                <form action="{{ route('contact_us') }}" method="post" class="text_align_left">
+                    {{ csrf_field() }}
                     <input type="text" name="firstname" placeholder="First Name" class="contact_form_name">
                     <input type="text" name="email" placeholder="Email" class="contact_form_email">
                     <input type="text" name="lastname" placeholder="Last Name">
