@@ -142,7 +142,7 @@ class PostController extends Controller
         {
             if (file_exists($post->image)) {
                 File::cleanDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
-                $removed = rmdir( "postspics".DIRECTORY_SEPARATOR."$id" );
+                Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
             }
             ini_set('memory_limit','256M');
             $image = $request->file('image');
@@ -171,6 +171,7 @@ class PostController extends Controller
                 //$removed = Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
 
                 $removed = rmdir( "postspics".DIRECTORY_SEPARATOR."$id" );
+                dd($removed);
                 if($removed){
                     $dataForUpdate['image'] = NULL;
                 }
