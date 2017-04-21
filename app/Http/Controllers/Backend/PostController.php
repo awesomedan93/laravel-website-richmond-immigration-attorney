@@ -67,6 +67,7 @@ class PostController extends Controller
 
         if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
         {
+            ini_set('memory_limit','256M');
             $image = $request->file('image');
             $filename  = 'post_image.' . $image->getClientOriginalExtension();
 
@@ -132,6 +133,7 @@ class PostController extends Controller
 
         if ($_FILES['image']['size'] > 0 && $_FILES['image']['error'] == 0)
         {
+            ini_set('memory_limit','256M');
             $image = $request->file('image');
             $filename  = 'post_image.' . $image->getClientOriginalExtension();
 
@@ -146,7 +148,7 @@ class PostController extends Controller
         if($request->input('image_remove') != NULL){
 
             if (file_exists($post->image)) {
-
+                ini_set('memory_limit','256M');
                 File::cleanDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
                 Storage::deleteDirectory( "postspics".DIRECTORY_SEPARATOR."$id" );
                 $removed = rmdir( "postspics".DIRECTORY_SEPARATOR."$id" );
@@ -175,20 +177,5 @@ class PostController extends Controller
 
             return response()->json(['status' => 'error', 'message' => $e->getMessage()], 403 );
         }
-    }
-
-    public static function deleteDir($dirPath) {
-        $dir = 'samples' . DIRECTORY_SEPARATOR . 'sampledirtree';
-        $it = new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS);
-        $files = new \RecursiveIteratorIterator($it,
-            \RecursiveIteratorIterator::CHILD_FIRST);
-        foreach($files as $file) {
-            if ($file->isDir()){
-                rmdir($file->getRealPath());
-            } else {
-                unlink($file->getRealPath());
-            }
-        }
-        return rmdir($dir);
     }
 }
