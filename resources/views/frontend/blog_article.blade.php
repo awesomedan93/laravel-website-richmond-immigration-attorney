@@ -22,9 +22,9 @@
                     <span class="article_title">{{ $post->title }}</span><br>
                     <span class="">{{ $publishedAt }}</span>
                     <div class="article_content">
-                        @if(!empty($post->post->image))
-                            <img src="{{ asset($post->post->image) }}">
-                        @endif
+                        {{--@if(!empty($post->post->image))--}}
+                            {{--<img src="{{ asset($post->post->image) }}">--}}
+                        {{--@endif--}}
                         <p>{!! $post->body !!}</p>
                     </div>
                 </article>
