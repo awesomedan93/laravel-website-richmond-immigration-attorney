@@ -71,7 +71,7 @@ class PostController extends Controller
             $filename  = 'post_image.' . $image->getClientOriginalExtension();
 
             if (!file_exists("postspics/$post->id")) {
-                mkdir("postspics/$post->id", 0777, true);
+                mkdir("postspics/$post->id", 0755, true);
             }
             $path = public_path("postspics/$post->id/" . $filename);
 
@@ -136,7 +136,7 @@ class PostController extends Controller
             $filename  = 'post_image.' . $image->getClientOriginalExtension();
 
             if (!file_exists("postspics".DIRECTORY_SEPARATOR."$id")) {
-                mkdir("postspics".DIRECTORY_SEPARATOR."$id", 0777, true);
+                mkdir("postspics".DIRECTORY_SEPARATOR."$id", 0755, true);
             }
             $path = public_path("postspics".DIRECTORY_SEPARATOR."$id".DIRECTORY_SEPARATOR . $filename);
 
