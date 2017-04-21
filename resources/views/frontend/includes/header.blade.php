@@ -2,7 +2,7 @@
 <header class="header">
     <div class="container">
 
-        <a href="{{ url('/') }}" class="logo_href"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"><br><span>RichmondImmigrationAttorney.com</span>
+        <a href="{{ url('/') }}" class="logo_href"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"><div class="clear"></div><span>RichmondImmigrationAttorney.com</span>
         </a>
 
         <div class="socials">

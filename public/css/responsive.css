@@ -14,9 +14,19 @@
 @media only screen and (max-width : 1200px) {
 
 }
-
+@media only screen and (min-width : 992px) {
+    .logo_href {
+        float: left;
+    }
+    .header {
+        height: 150px;
+    }
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    .header {
+        height: 165px;
+    }
     .quote p {
         padding:0px;
     }
@@ -159,8 +169,10 @@
         display:none;
     }
 
+
 }
 @media only screen and (max-width : 570px) {
+
     .home_third_row {
         padding: 30px;
     }
@@ -210,6 +222,12 @@
 }
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+    .header {
+        height: inherit;
+    }
+    .tel a {
+        font-size:inherit;
+    }
     .logo {
         width: 280px;
         margin: 0 auto;

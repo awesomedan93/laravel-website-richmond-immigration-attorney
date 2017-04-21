@@ -103,9 +103,6 @@ p {
     -ms-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
 }
-.header {
-    height: 150px;
-}
 
 .nav {
   height: 40px;
@@ -738,9 +735,10 @@ a.article_title:hover {
     margin-bottom: 5px;
 }
 .logo_href{
-    float:left;
-    text-align: center;
+
 }
 .logo_href {
     text-decoration: none;
+    text-align: center;
+    display: block;
 }
