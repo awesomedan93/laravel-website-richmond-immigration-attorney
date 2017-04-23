@@ -3,7 +3,7 @@
 return [
     'learn_more' => 'Learn More',
     'practice_areas' => 'Practice Areas',
-    'more_testimonials' => 'More Opinions',
+    'more_testimonials' => 'More Reviews',
     'attorney' => 'Attorney',
     'email' => 'Email',
     'phone' => 'Phone',

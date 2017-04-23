@@ -2,7 +2,7 @@
 
 return [
     'title' => 'Let us build a strong case for you.',
-    'sub_title' => 'Client Opinions',
+    'sub_title' => 'Client Reviews',
 
     'lorena' => 'I want to thank Mrs. Soulmaz for helping me with my immigration paperwork till the very end, for not leaving me alone and for always being there for me. I feel blessed for finding this attorney. Blessings',
     'umar' => 'I am a highly satisfied client! Because of you, I got a green card. You are efficient and have saved a lot of my time in handling my complicated immigration case. I will always stay with you for all my legal and immigration advice. I am also highly recommending you to all my friends and colleagues for immigration/ criminal issues.',

@@ -70,7 +70,7 @@
                 <div class="quote_icon"></div><div class="text_align_right">- Umar</div>
                 {!! trans('pages/home.testimonial') !!}
             </div>
-            <a href="{{ url('/opinions') }}" class="button blue_button">{{ trans('general.more_testimonials')}}</a>
+            <a href="{{ url('/reviews') }}" class="button blue_button">{{ trans('general.more_testimonials')}}</a>
             <div class="clear"></div>
         </div>
     </div>

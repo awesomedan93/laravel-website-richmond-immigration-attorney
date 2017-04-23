@@ -41,7 +41,7 @@
                             <li class="{{ Request::segment(3) == 'pages.soulmaz_taghavi'?'active ':'' }}"><a href="{{ url('dashboard/seo/pages.soulmaz_taghavi') }}"><i class="fa fa-circle-o"></i>Soulmaz Taghavi</a></li>
                         </ul>
                     </li>
-                    <li class="{{ Request::segment(3) == 'pages.opinions'?'active ':'' }}"><a href="{{ url('dashboard/seo/pages.opinions') }}"><i class="fa fa-circle-o"></i>Opinions</a></li>
+                    <li class="{{ Request::segment(3) == 'pages.reviews'?'active ':'' }}"><a href="{{ url('dashboard/seo/pages.reviews') }}"><i class="fa fa-circle-o"></i>Reviews</a></li>
                     <li class="{{ Request::segment(3) == 'pages.blog'?'active ':'' }}"><a href="{{ url('dashboard/seo/pages.blog') }}"><i class="fa fa-circle-o"></i>Blog</a></li>
                     <li class="{{ Request::segment(3) == 'pages.contact'?'active ':'' }}"><a href="{{ url('dashboard/seo/pages.contact') }}"><i class="fa fa-circle-o"></i>Contact</a></li>
                 </ul>

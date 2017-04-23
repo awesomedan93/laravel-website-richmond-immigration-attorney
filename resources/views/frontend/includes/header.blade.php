@@ -36,7 +36,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ url('opinions') }}">{{ trans('general.testimonials') }}</a>
+                <a href="{{ url('reviews') }}">{{ trans('general.testimonials') }}</a>
             </li>
             <li>
                 <a href="{{ url('blog') }}">{{ trans('general.blog') }}</a>
@@ -79,7 +79,7 @@
                 <li><a href="{{ url('/attorneys/soulmaz-taghavi') }}">Soulmaz Taghavi</a></li>
             </ul>
         </li>
-        <li><a href="{{ url('/opinions') }}">Opinions</a></li>
+        <li><a href="{{ url('/reviews') }}">Reviews</a></li>
         <li><a href="{{ url('/blog') }}">Blog</a></li>
         <li><a href="{{ url('/contact') }}">Contact</a></li>
     </ul>

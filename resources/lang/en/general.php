@@ -24,7 +24,7 @@ return [
         'case_traffic_law' => 'Traffic Law',
         'case_dui_law' => 'DUI Law',
     'attorneys' => 'Attorneys',
-    'testimonials' => 'Opinions',
+    'testimonials' => 'Reviews',
     'blog' => 'Blog',
     'contact' => 'Contact'
 ];

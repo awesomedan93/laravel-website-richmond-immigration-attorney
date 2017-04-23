@@ -24,7 +24,7 @@
 
                 {!! trans('pages/cases/immigration_law.testimonial_content') !!}
             </div>
-            <a href="{{ url('/opinions') }}" class="button blue_button align_right">{{ trans('general.more_testimonials') }}</a>
+            <a href="{{ url('/reviews') }}" class="button blue_button align_right">{{ trans('general.more_testimonials') }}</a>
             <div class="clear"></div>
         </div>
     </div>
