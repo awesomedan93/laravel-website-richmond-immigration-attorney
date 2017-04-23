@@ -22,7 +22,7 @@ class PagesTableSeeder extends Seeder
             ['key'=>'pages.attorneys','menu_title'=>'Attorneys'],
             ['key'=>'pages.raul_novo','menu_title'=>'Raul Novo'],
             ['key'=>'pages.soulmaz_taghavi','menu_title'=>'Soulmaz Taghavi'],
-            ['key'=>'pages.testimonials','menu_title'=>'Testimonials'],
+            ['key'=>'pages.opinions','menu_title'=>'Opinions'],
             ['key'=>'pages.blog','menu_title'=>'Blog'],
             ['key'=>'pages.contact','menu_title'=>'Contact']
         ];

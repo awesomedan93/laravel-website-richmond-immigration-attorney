@@ -3,7 +3,7 @@
 return [
     'learn_more' => 'Learn More',
     'practice_areas' => 'Practice Areas',
-    'more_testimonials' => 'More Testimonials',
+    'more_testimonials' => 'More Opinions',
     'attorney' => 'Attorney',
     'email' => 'Email',
     'phone' => 'Phone',
@@ -24,7 +24,7 @@ return [
         'case_traffic_law' => 'Traffic Law',
         'case_dui_law' => 'DUI Law',
     'attorneys' => 'Abogados',
-    'testimonials' => 'Testimonios',
+    'testimonials' => 'Opiniones',
     'blog' => 'Blog',
     'contact' => 'Contacto'
 ];

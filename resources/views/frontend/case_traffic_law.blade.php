@@ -20,7 +20,7 @@
 
                 {!! trans('pages/cases/traffic_law.testimonial_content') !!}
             </div>
-            <a href="{{ url('/testimonials') }}" class="button blue_button align_right">{{ trans('general.more_testimonials') }}</a>
+            <a href="{{ url('/opinions') }}" class="button blue_button align_right">{{ trans('general.more_testimonials') }}</a>
             <div class="clear"></div>
         </div>
     </div>

@@ -105,11 +105,11 @@ class PageController extends Controller
                 return view('frontend.lawyer2',['metaTags'=>$metaTags]);
                 break;
 
-            case "pages.testimonials":
+            case "pages.opinions":
                 $page = new Page();
                 $metaTags = $page->getMetaTags($routeName);
 
-                return view('frontend.testimonials',['metaTags'=>$metaTags]);
+                return view('frontend.opinions',['metaTags'=>$metaTags]);
                 break;
 
             case "pages.contact":

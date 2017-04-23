@@ -16,7 +16,7 @@ Route::group([
     Route::get('/attorneys', 'Frontend\PageController@show')->name('pages.attorneys');
     Route::get('/attorneys/raul-novo', 'Frontend\PageController@show')->name('pages.raul_novo');
     Route::get('/attorneys/soulmaz-taghavi', 'Frontend\PageController@show')->name('pages.soulmaz_taghavi');
-    Route::get('/testimonials', 'Frontend\PageController@show')->name('pages.testimonials');
+    Route::get('/opinions', 'Frontend\PageController@show')->name('pages.opinions');
     Route::get('/blog', 'Frontend\PostController@index');
 
     Route::get('/blog/{slug}', 'Frontend\PostController@show')->name('blog.post');
