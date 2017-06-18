@@ -2,16 +2,6 @@
 @section('custom-header')
     <link rel="stylesheet" href="{{ asset('packages/rrssb/css/rrssb.css') }}" />
 @endsection
-@section('after-body')
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=450339215153598";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-@endsection
 @section('content')
     <div class="case_row">
         <div class="container">
@@ -32,7 +22,7 @@
                     @include('frontend.partials.socials')
                 </div>
                 <br>
-                <div class="fb-comments" data-width="100%" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+
                 <div class="clear"></div>
 
             </div>
