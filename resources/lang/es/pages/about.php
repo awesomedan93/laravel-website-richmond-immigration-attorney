@@ -2,22 +2,14 @@
 
 return [
 
-    'title' => 'About Our Firm',
-    'subtitle' => 'Central Virginia’s Premier Immigration & Criminal Defense Attorneys',
+    'title' => 'Sobre Nuestra Firma',
+    'subtitle' => 'Abogados de Inmigración y Defensa Criminal de Virginia Central',
 
-    'first_paragraph' => 'The ancient Chinese proverb wishing, “may you live in interesting times” 
-    has never been more true. Two of the most controversial issues facing society today are 
-    immigration and criminal justice. As laws have become more complex, the average person 
-    cannot afford to take on these twin hurdles without competent, aggressive legal counsel.',
+    'first_paragraph' => 'El antiguo proverbio chino desea, "puede usted vivir en épocas interesantes" nunca ha sido más verdad. Dos de los temas más controvertidos que enfrenta la sociedad actual son inmigración y justicia penal. A medida que las leyes se han vuelto más complejas, la persona promedio no puede permitirse el lujo de asumir estos dos obstáculos sin un abogado competente y agresivo.',
 
-    'second_paragraph' => 'Founded at the end of 2016, Novo Taghavi, Ltd. is a law firm specializing 
-    in personal service for difficult criminal and immigration cases. Soulmaz Taghavi honed her skills 
-    in both disciplines while Raul Novo has concentrated solely on criminal and traffic representation. 
-    The unique pairing of these two Children of Revolution to take on the toughest cases clients face was 
-    a natural consequence of the blending of laws known as “crimmigration.” Make an appointment today with 
-    Soulmaz or Raul and see how we can help you navigate these interesting times.',
+    'second_paragraph' => 'Fundada a finales de 2016, Novo Taghavi, Ltd. es una firma de abogados especializada en servicios personales para casos penales y de inmigración difíciles. Soulmaz Taghavi perfeccionó sus habilidades en ambas disciplinas, mientras que Raúl Novo se ha concentrado únicamente en la representación criminal y de tráfico. La pareja única de estos dos Hijos de la Revolución para asumir los casos más difíciles que enfrentan los clientes fue un resultado natural de la mezcla de leyes conocidas como "Crimigración". Haga una cita hoy con Soulmaz o Raúl y vea cómo podemos ayudarlo a navegar por estos tiempos interesantes.',
 
-    'get_in_touch' => 'Get In Touch',
+    'get_in_touch' => 'Ponerse en Contacto',
     'about_us_image' =>  asset('img/mejores-abogados-en-richmond-va.webp'),
     'about_us_image_alt' => 'Mejores abogados en richmond va'
 

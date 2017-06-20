@@ -183,7 +183,7 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
+
 }
 .slider_attorneys {
   height: 560px;
@@ -197,7 +197,7 @@ p {
 
   background-color: #F5F6F8;
   padding: 80px 0px;
-  
+
 }
 .home_second_row {
   padding-top: 50px;
@@ -398,7 +398,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 .about_us_right_block img{
       width: 100%;
-    
+
 }
 .float_left {
   float:left;
@@ -447,7 +447,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 .testimonails_slider_title {
   padding: 100px 0 0 80px;
-  width: 50%;
+  width: 52%;
   color: #fff;
   font:normal normal normal 48px/1.25em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
 
@@ -469,7 +469,7 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 .lawyer_left_block img{
   display:block;
-} 
+}
 .lawyer_left_block {
   display:inline-block;
   width:37%;
@@ -498,12 +498,12 @@ width:460px; height:auto; margin:4px; display: inline-block;
 }
 .cases_slider_title {
   padding: 150px 0 0 70px;
-  width: 50%;
+  width: 52%;
   color: #fff;
 }
 .cases_left_block img{
   display:block;
-} 
+}
 .cases_left_block {
   display:inline-block;
   width:47%;

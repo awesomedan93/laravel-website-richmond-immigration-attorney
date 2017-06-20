@@ -1,31 +1,31 @@
 <?php
 
 return [
-    'title' => 'DUI Law',
-    'sub_title' => 'DUI Lawyer in Richmond, VA',
-    'page_content' => '​<h6 class="bold_text">DO YOU NEED A DUI LAWYER IN RICHMOND, VA?</h6>
-            <p>Driving under the influence (DUI) of drugs or alcohol is a serious offense in Virginia. Persons convicted of DUI in Virginia can suffer serious consequences including heavy fines, loss or suspension of driver’s license and even jail time. If you have been charged with DUI in Richmond, Chesterfield, Henrico or surrounding areas, you need an experienced DUI lawyer to protect your rights.
+    'title' => 'Ley DUI',
+    'sub_title' => 'Abogado DUI en Richmond, VA',
+    'page_content' => '​<h6 class="bold_text">¿NECESITA UN ABOGADO DUI EN RICHMOND, VA?</h6>
+            <p>Conducir bajo la influencia (DUI) de drogas o alcohol es una ofensa seria en Virginia. Las personas condenadas por DUI en Virginia pueden sufrir graves consecuencias incluyendo multas fuertes, pérdida o suspensión de la licencia de conducir e incluso tiempo en cárcel. Si usted ha sido acusado de DUI en Richmond, Chesterfield, Henrico o áreas circundantes, necesita un abogado con experiencia en DUI para proteger sus derechos.
                 ​<br>
-                Contact an experienced DUI attorney from the law office of Novo Taghavi. Call (804) 614-6920 for your free consultation.
+                Póngase en contacto con un abogado experimentado de DUI de la oficina de abogados de Novo Taghavi. Llame al (804) 614-6920 para su consulta gratuita.
             </p>
-            <h6 class="bold_text">WHAT ARE THE PENALTIES FOR A DUI CONVICTION IN VIRGINIA?</h6>
-            <p>Penalties for DUI convictions in Virginia vary depending on a variety of factors such as prior convictions, your blood alcohol concentration at the time of arrest, whether the driver caused an accident or collision and other mitigating factors.</p>
+            <h6 class="bold_text">¿CUÁLES SON LAS SANCIONES POR UNA CONDENA DE DUI EN VIRGINIA?</h6>
+            <p>Las penas por condenas por DUI en Virginia varían dependiendo de una diversidad de factores tales como condenas anteriores, su concentración de alcohol en la sangre en el momento del arresto, si el conductor causó un accidente o colisión y otros factores atenuantes.</p>
 
-            <h6 class="bold_text">WILL I GO TO JAIL FOR A FIRST TIME DUI IN VIRGINIA?</h6>
-            <p>First offense convictions for DUI do not carry a mandatory minimum period of jail time or incarceration unless the offender had a minor passenger in the vehicle. In that case there is a mandatory minimum incarceration of five days.</p>
+            <h6 class="bold_text">¿IRÉ A LA CÁRCEL POR PRIMERA VEZ DE DUI EN VIRGINIA?</h6>
+            <p>Las primeras condenas por DUI no tienen un período mínimo obligatorio de prisión o encarcelamiento a menos que el infractor tenga un pasajero menor en el vehículo. En ese caso hay un encarcelamiento mínimo obligatorio de cinco días.</p>
 
-            <h6 class="bold_text">HOW MUCH IS THE FINE FOR A DUI IN VIRGINIA?</h6>
-            <p>The fine for a first offense DUI in Virginia is $250, unless there was a minor passenger in the vehicle, then the fine will increase by at least $500 but no more than $2,500.
+            <h6 class="bold_text">¿CUÁNTO CUESTA LA MULTA POR UN DUI EN VIRGINIA?</h6>
+            <p>La multa por una primera infracción de DUI en Virginia es de $250 dólares, a menos que hubiera un pasajero menor en el vehículo, entonces la multa se incrementará en al menos $500 dólares, pero no más de $ 2,500 dólares.
                 <br><br>
-                Other penalties for a first time DUI conviction in Virginia can include mandatory use of an ignition interlock device and suspension of driver’s license.</p>
+                Otras sanciones por una primera condena de DUI en Virginia puede incluir el uso obligatorio de un dispositivo de bloqueo de encendido y la suspensión de la licencia de conducir.</p>
 
-            <h6 class="bold_text">DUI CONVICTIONS IN VIRGINIA CARRY SERIOUS CONSEQUENCES</h6>
-            In addition to the legal consequences of a DUI in Virginia such as jail time, fines, and loss of license, a DUI conviction can cause you additional problems. A DUI conviction can cost you your job or your chances of getting a job in the future. Hiring the right DUI lawyer could mean the difference between a conviction and an acquittal. The stakes are too high to not take a DUI charge seriously.
+            <h6 class="bold_text">CONDENAS POR DUI EN VIRGINIA CONLLEVAN SERIAS CONSECUENCIAS</h6>
+            Además de las consecuencias legales de un DUI en Virginia como tiempo en la cárcel, multas y pérdida de licencia, una condena por DUI puede causarle problemas adicionales. Una condena de DUI puede costarle su trabajo o sus posibilidades de conseguir un trabajo en el futuro. La contratación del abogado adecuado de DUI podría ser la diferencia entre una condena y una absolución. Las apuestas son demasiado altas para no tomar en serio un cargo de DUI.
             <br><br>
             <span class="align_center_text">
             <h6 class="bold_text">
-            DO YOU HAVE QUESTIONS ABOUT DUI IN VIRGINIA?
+            ¿TIENE PREGUNTAS SOBRE DUI EN VIRGINIA?
             </h6>
-            <span class="align_center_text">Get the answers you need by contacting our Richmond, VA DUI lawyers for your free consultation today!<br>(804) 614-6920</span></span>',
+            <span class="align_center_text">Obtenga las respuestas que necesita poniéndose en contacto con nuestros abogados de DUI en Richmond, VA para una consulta gratuita hoy.<br>(804) 614-6920</span></span>',
 
 ];

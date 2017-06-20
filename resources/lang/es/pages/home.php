@@ -2,33 +2,33 @@
 
 return [
     //Slider
-    'title' => 'Let us build a strong case for you.',
-    'get_in_touch' => 'Get In Touch',
+    'title' => 'Construyamos un caso fuerte para usted.',
+    'get_in_touch' => 'Ponerse en Contacto',
 
     //First Row
-    'about_title' => 'About Novo Taghavi',
-    'about_sub_title' => 'Central Virginia’s Premier Immigration & Criminal Defense Firm',
-    'about_description' => 'Rapidly changing social and family dynamics have produced a need for legal practitioners skilled in criminal as well as immigration matters, commonly referred to as Crimmigration Law. Whether you have a legal issue that directly affects you or a loved one, let Novo Taghavi build a strong case for you. We have over twenty years combined experience in State and Federal Courts protecting the rights of those clients facing the toughest cases, such as: rape, murder, drug distribution, DUI’s, removal and deportation, asylum petitions, as well other forms of immigrations relief. You will personally meet with your attorney, and understand every legal step along the way towards having your case resolved promptly and professionally. Don’t waste time, call us today and we will start building a strong case for you right away!',
-    'learn_more_about_us' => 'Learn More About Us',
+    'about_title' => 'Sobre Novo Taghavi',
+    'about_sub_title' => 'Firma de Abogados de Inmigración Premier y Defensa Criminal de Virginia Central',
+    'about_description' => 'El rápido cambio de las dinámicas sociales y familiares ha producido la necesidad de profesionales legales especializados en asuntos criminales e inmigratorios, comúnmente denominados Ley de Crimigración. Si tiene un problema legal que le afecta directamente a usted o a un ser querido, deje que Novo Taghavi construya un caso fuerte para usted. Tenemos más de veinte años de experiencia combinada en los Tribunales Federales y Estatales protegiendo los derechos de aquellos clientes enfrentando los casos más duros, como violación, asesinato, distribución de drogas, DUI, remoción y deportación, peticiones de asilo y otras formas de ayuda de inmigración. Usted se reunirá personalmente con su abogado, y entenderá cada paso legal en el camino hacia tener su caso resuelto rápidamente y profesionalmente. ¡No pierda tiempo, llámenos hoy y empezaremos a construir un caso fuerte para usted de inmediato!',
+    'learn_more_about_us' => 'Aprenda Más Sobre Nosotros',
 
     //Second Row
-    'cases' => 'Cases We Handle',
-    'cases_description' => 'Our firm is a full-service immigration law firm that handles family and employment-based immigration cases, humanitarian relief and removal defense. We also have over twenty years of experience in Central Virginia practicing Criminal and Traffic defense. Our attorneys are well-versed in the cross-section of Criminal and Immigration Law in what is known to be Crimmigration Law. Learn more about how we can make your case our priority.',
+    'cases' => 'Casos que Manejamos',
+    'cases_description' => 'Nuestra firma de abogados de inmigración es un servicio completo que maneja casos de inmigración basados ​​en la familia y el empleo, ayuda humanitaria y defensa de remoción. También tenemos más de veinte años de experiencia en Virginia Central practicando defensa criminal y de tráfico. Nuestros abogados son expertos ​​en la sección transversal de la Ley Criminal y de Inmigración en lo que se conoce como Ley de Crimigración. Aprenda más sobre cómo podemos hacer que su caso sea nuestra prioridad.',
 
     //Cases Blocks
-    'crimminal_defense' => 'Criminal Defense',
+    'crimminal_defense' => 'Defensa Criminal',
     'crimminal_defense_img' => asset('img/abogado-de-inmigracion-farmville-va.jpg'),
     'crimminal_defense_img_alt' => 'Abogado de inmigracion farmville va',
 
-    'immigration_law' => 'Immigration Law',
+    'immigration_law' => 'Ley de Inmigración',
     'immigration_law_img' => asset('img/abogado-de-inmigracion-ashland-va.jpg'),
     'immigration_law_img_alt' => 'Abogado de inmigracion ashland va',
 
-    'traffic_law' => 'Traffic Law',
+    'traffic_law' => 'Ley de Tráfico',
     'traffic_law_img' => asset('img/abogado-immigracion-hopewell-va.jpg'),
     'traffic_law_img_alt' => 'Abogado immigracion hopewell va',
 
-    'dui_law' => 'DUI Law',
+    'dui_law' => 'Ley DUI',
     'dui_law_img' => asset('img/abogado-de-inmigracion-petersburg-va.jpg'),
     'dui_law_img_alt' => 'Abogado de inmigracion petersburg va',
 

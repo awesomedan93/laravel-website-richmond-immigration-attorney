@@ -1,49 +1,49 @@
 <?php
 
 return [
-    'title' => 'Criminal Defense',
-    'sub_title' => 'Richmond Criminal Lawyers',
-    'page_content' => '<p><h6 class="bold_text">EXPERIENCED CRIMINAL DEFENSE LAWYERS FIGHTING FOR YOU</h6>
-            Raul Novo and Soulmaz Taghavi are experienced criminal defense lawyers serving the Richmond, Henrico, Chesterfield and surrounding areas.</p>
-            <p>Raul Novo is a savvy and passionate lawyer who has, for over twenty years,  dedicated himself to criminal defense cases. Raul has fought for his clients in both federal and local courts throughout Central Virginia. Raul has represented clients facing drug charges, DUI arrests and other criminal violations of the law in both bench and jury trials.</p>
-            <p>Soulmaz Taghavi is an experienced lawyer who specializes in criminal defense and immigration law. Soulmaz honed her skills as a criminal defense lawyer as a legal intern in the Durham District Attorney’s Office of the 14th District and later as a clerk at the Superior Court of the District of Columbia in Washington, D. C. Soulmaz has successfully handled a variety of criminal and immigration matters in her legal career in both federal and local courts. Soulmaz is multilingual and is fluent in Persian, Dari and proficient in Spanish.</p>
+    'title' => 'Defensa Criminal',
+    'sub_title' => 'Richmond Abogados Penales',
+    'page_content' => '<p><h6 class="bold_text">ABOGADOS DE DEFENSA PENAL EXPERIMENTADOS QUE LUCHAN POR USTED</h6>
+            Raúl Novo y Soulmaz Taghavi son abogados experimentados en defensa criminal que sirven en Richmond, Henrico, Chesterfield y en áreas adyacentes.</p>
+            <p>Raúl Novo es un conocedor y apasionado abogado que durante más de veinte años se ha dedicado a casos de defensa criminal. Raúl ha luchado por sus clientes en los tribunales federales y locales en todo el Centro de Virginia. Raúl ha representado a clientes que enfrentan cargos de drogas, arrestos por DUI y otras violaciones criminales de la ley tanto en juicios de jurado como de tribunal.</p>
+            <p>Soulmaz Taghavi es una abogada experimentada que se especializa en la defensa criminal y ley de inmigración. Soulmaz perfeccionó sus habilidades como abogada de defensa criminal como una interna legal en la Oficina del Fiscal de Distrito de Durham del Distrito 14 y más tarde como una empleada en la Corte Superior del Distrito de Columbia en Washington, DC. Soulmaz ha manejado con éxito una variedad de crímenes y asuntos de inmigración en su carrera legal en los tribunales federales y locales. Soulmaz es multilingüe y domina el persa, el dari y el español.</p>
             <h6 class="bold_text">
-                Our lawyers will fight to protect your rights. Contact us today by calling (804) 614-6920.
+                Nuestros abogados lucharán para proteger sus derechos. Contáctenos hoy llamando al (804) 614-6920.
             </h6>
-            <h6 class="bold_text">AREAS OF CRIMINAL LAW​</h6>
-            <p>There are many areas of criminal law and different types of criminal cases in Virginia ranging from reckless driving to murder. Our experienced Richmond criminal attorneys have experience in many types of criminal cases.</p>
-            <h6 class="bold_text">These are some examples of criminal cases in Virginia:</h6>
-            <h6 class="bold_text">Traffic</h6>
+            <h6 class="bold_text">ÁREAS DE DERECHO PENAL​</h6>
+            <p>Hay muchas áreas de derecho penal y diferentes tipos de casos penales en Virginia que van desde la conducción imprudente hasta el asesinato. Nuestros experimentados abogados criminales de Richmond tienen experiencia en muchos tipos de casos criminales.</p>
+            <h6 class="bold_text">Estos son algunos ejemplos de casos criminales en Virginia:</h6>
+            <h6 class="bold_text">Tráfico</h6>
             <ul class="lawyer_list">
-                <li>DUI</li>
-                <li>Reckless Driving</li>
-                <li>Moving Violations</li>
-                <li>Driving on a Suspended License</li>
-                <li>Driving Without a License</li>
+                <li>DUI (Conducir Bajo Influencia de Alcohol)</li>
+                <li>Conducción Imprudente</li>
+                <li>Infracciones</li>
+                <li>Conducir con una Licencia Suspendida</li>
+                <li>Conducir Sin Licencia</li>
             </ul>
-            ​<h6 class="bold_text">Misdemeanors</h6>
+            ​<h6 class="bold_text">Delitos menores</h6>
             <ul class="lawyer_list">
-                <li>Assault</li>
-                <li>Battery</li>
-                <li>Drug Charges (depending on charge)</li>
-                <li>Shoplifting</li>
-                <li>Trespassing</li>
+                <li>Agresión</li>
+                <li>Lesiones</li>
+                <li>Cargos de drogas (dependiendo de la carga)</li>
+                <li>Robo</li>
+                <li>Infracción</li>
             </ul>
-            ​<h6 class="bold_text">Felonies</h6>
+            ​<h6 class="bold_text">Delitos</h6>
             <ul class="lawyer_list">
-                <li>Child Abuse</li>
-                <li>Drug Charges (depending on charge)</li>
-                <li>Embezzlement</li>
-                <li>Grand Larceny</li>
-                <li>Malicious Wounding</li>
-                <li>Murder</li>
-                <li>Rape</li>
-                <li>Sex Crimes</li>
+                <li>Abuso infantil</li>
+                <li>Cargos de drogas (dependiendo de la carga)</li>
+                <li>Malversación de fondos</li>
+                <li>Robo Agravado</li>
+                <li>Lesiones dolosas</li>
+                <li>Asesinato</li>
+                <li>Violación</li>
+                <li>Crímenes sexuales</li>
             </ul>
 
-            ​<p>Our Richmond criminal lawyers will take the time to help you understand the law and the nature of the charges brought against you. We will explain the process and the proceedings to you and your loved ones at each step along the way.​</p>
+            ​<p>Nuestros abogados criminales de Richmond se toman el tiempo para ayudarle a entender la ley y la naturaleza de los cargos presentados en su contra. Nosotros le explicaremos el proceso y los procedimientos a usted y a sus seres queridos en cada una de las etapas.​</p>
             <span class="align_center_text">
-            <h6 class="bold_text">GET HELP FROM AN EXPERIENCED RICHMOND, VA CRIMINAL LAWYER</h6>
-            <span class="align_center_text">We are here to defend your rights. Call (804) 614-6920 today for your free consultation.</span></span>
+            <h6 class="bold_text">CONSIGA AYUDA DE UN ABOGADO CRIMINAL EXPERIMENTADO EN RICHMOND, VA.</h6>
+            <span class="align_center_text">Estamos aquí para defender sus derechos. Llame hoy al (804) 614-6920 para su consulta gratuita.</span></span>
             '
 ];

@@ -1,23 +1,23 @@
 <?php
 
 return [
-    'title' => 'Cases We Handle',
-    'sub_title' => 'Our firm is a full service immigration law firm that handles family and employment based immigration cases, humanitarian relief and removal defense. We also have over twenty years of experience in Central Virginia practicing Criminal and Traffic defense.',
+    'title' => 'Casos que Manejamos',
+    'sub_title' => 'Nuestra firma de abogados de inmigración es un servicio completo que maneja casos de inmigración basados ​​en la familia y el empleo, ayuda humanitaria y defensa de remoción. También tenemos más de veinte años de experiencia en Virginia Central practicando defensa criminal y de tráfico. Nuestros abogados son expertos ​​en la sección transversal de la Ley Criminal y de Inmigración en lo que se conoce como Ley de Crimigración. Aprenda más sobre cómo podemos hacer que su caso sea nuestra prioridad.',
 
-    'criminal_defense' => 'Criminal Defense',
-    'criminal_defense_desc' => 'There are many areas of criminal law cases in Virginia ranging from reckless driving to murder. Our experienced Richmond criminal attorneys have experience in many types of criminal cases.',
+    'criminal_defense' => 'Defensa Criminal',
+    'criminal_defense_desc' => 'Hay muchas áreas de derecho penal y diferentes tipos de casos penales en Virginia que van desde la conducción imprudente hasta el asesinato. Nuestros experimentados abogados criminales de Richmond tienen experiencia en muchos tipos de casos criminales.',
     'criminal_defense_img' => asset('img/criminal_defense.webp'),
 
-    'immigration_law' => 'Immigration Law',
-    'immigration_law_desc' => 'Being detained by immigration authorities and placed in removal proceedings can be a frightening experience If you have a family member, friend or employee facing deportation, the law firm of Novo Taghavi can help.',
+    'immigration_law' => 'Ley de Inmigración',
+    'immigration_law_desc' => 'Ser detenido por las autoridades de inmigración y ser puesto en un proceso de expulsión puede ser una experiencia espantosa. Si usted tiene un miembro de su familia, un amigo o un empleado que se enfrente a la deportación, la firma de abogados de Novo Taghavi puede ayudar.',
     'immigration_law_img' => asset('img/immigration_law.webp'),
 
-    'traffic_law' => 'Traffic Law',
-    'traffic_law_desc' => 'Hiring a qualified traffic lawyer can save you money in fines and protect you from losing your driver’s license. Don’t risk losing your license if you don’t have to.',
+    'traffic_law' => 'Ley de Tráfico',
+    'traffic_law_desc' => 'Contratar a un abogado calificado tráfico calificado le puede ahorrar dinero y protegerlo de perder su licencia de conducir. No se arriesgue a perder su licencia si no tiene que hacerlo.',
     'traffic_law_img' => asset('img/traffic_law.webp'),
 
-    'dui_law' => 'DUI Law',
-    'dui_law_desc' => 'In addition to the legal consequences of a DUI in Virginia such as jail time, fines, and loss of license, a DUI conviction can cause you additional problems.',
+    'dui_law' => 'Ley DUI',
+    'dui_law_desc' => 'Además de las consecuencias legales de un DUI (Conducir Bajo la Influencia del Alcohol) en Virginia como el tiempo en prisión, multas y pérdida de la licencia, una condena por DUI puede causarle problemas adicionales.',
     'dui_law_img' => asset('img/dui_law.webp')
 
 ];

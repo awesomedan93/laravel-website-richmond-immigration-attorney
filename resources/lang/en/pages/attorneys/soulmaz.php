@@ -7,5 +7,10 @@ return [
             <p>Before joining partner Raul Novo, Soulmaz worked for almost three years at Fayad Law, P.C.’s Richmond, Virginia office. Today, Soulmaz has immense experience in preparing and filing defensive reliefs and motions before Immigration Courts and Board of Immigration Appeals, including, Asylum, Cancellation of Removal, Prosecutorial Discretion requests, Convention against Torture, I-212(h) Criminal and Inadmissibility Waivers, and I-601A/I-601 Provisional Waivers. Soulmaz has represented individuals in Individual, Master Calendar and Bond Hearings before various Immigration Courts. She has experience in preparing and filing humanitarian and family-based immigration petitions, applications, briefs and waivers for USCIS, including Naturalization and Adjustment of Status applications. Well-versed in state and federal appeals, Soulmaz single-handedly gave oral arguments before a three-panel judge at the United States Court of Appeals for the Fourth Circuit, arguing for procedural due process rights in a contested alleged immigration marriage fraud case in Bassam Hanna v. Loretta Lynch on March 21, 2016.</p>
             Soulmaz is a member of both the Virginia and District of Columbia Bar Associations.',
     'img' => asset('img/best-immigration-lawyer-in-chesterfield.webp'),
-    'img_alt' => 'best immigration lawyer in chesterfield'
+    'img_alt' => 'best immigration lawyer in chesterfield',
+    'member1' => 'Virginia Bar Association',
+    'member2' => 'District of Columbia Bar Association',
+    'member3' => 'Iranian-American Bar Association (D.C. Chapter)',
+    'member4' => 'American Immigration Lawyers Association',
+    'member5' => 'Central Virginia Iranian American Society (Treasurer)'
 ];

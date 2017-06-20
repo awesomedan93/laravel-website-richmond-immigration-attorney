@@ -17,7 +17,7 @@
             <img src="@lang('pages/attorneys.raul_img')" class="attorneys_sub_block" alt="@lang('pages/attorneys.raul_img_alt')">
             <span class="attorneys_sub_block_right">
                 <br>
-                <h6>Attorney</h6>
+                <h6>{{ trans('general.attorney') }}</h6>
                 <h2 class="blue_title">Raul Novo</h2>
                 <p>{{ trans('pages/attorneys.about_raul') }}</p>
                 <a href="{{ url('/attorneys/raul-novo') }}" class="button blue_button responsive_align">{{ trans('pages/attorneys.learn_more_about_raul') }}</a>
@@ -28,7 +28,7 @@
             <img src="@lang('pages/attorneys.soulmaz_img')" class="attorneys_sub_block" alt="@lang('pages/attorneys.soulmaz_img_alt')">
             <span class="attorneys_sub_block_right">
                 <br>
-                <h6>Attorney</h6>
+                <h6>{{ trans('general.attorney') }}</h6>
                 <h2 class="blue_title">Soulmaz Taghavi</h2>
                 <p>{{ trans('pages/attorneys.about_soulmaz') }}</p>
                 <a href="{{ url('/attorneys/soulmaz-taghavi') }}" class="button blue_button">{{ trans('pages/attorneys.learn_more_about_soulmaz') }}</a>

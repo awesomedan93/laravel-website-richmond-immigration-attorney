@@ -28,11 +28,11 @@
 
             <span class="bold_text">{{ trans('general.memberships') }}</span><br>
             <ul class="lawyer_list">
-                <li>Virginia Bar Association</li>
-                <li>District of Columbia Bar Association</li>
-                <li>Iranian-American Bar Association (D.C. Chapter)</li>
-                <li>American Immigration Lawyers Association</li>
-                <li>Central Virginia Iranian American Society (Treasurer)</li>
+                <li>{{ trans('pages/attorneys/soulmaz.member1') }}</li>
+                <li>{{ trans('pages/attorneys/soulmaz.member2') }}</li>
+                <li>{{ trans('pages/attorneys/soulmaz.member3') }}</li>
+                <li>{{ trans('pages/attorneys/soulmaz.member4') }}</li>
+                <li>{{ trans('pages/attorneys/soulmaz.member5') }}</li>
             </ul>
 
             </span>

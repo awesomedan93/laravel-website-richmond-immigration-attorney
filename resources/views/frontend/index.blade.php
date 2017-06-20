@@ -77,7 +77,7 @@
     <div class="home_fourth_row align_center">
         <div class="container">
             <h2 class="blue_title padding_title">
-                Get in Touch
+                {{ trans('general.get_in_touch') }}
             </h2>
             <span>
                 {{ trans('pages/home.contact_us_now') }}

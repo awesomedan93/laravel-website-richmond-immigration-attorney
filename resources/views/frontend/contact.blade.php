@@ -24,11 +24,11 @@
                 </div> <!-- end .flash-message -->
                 <form action="{{ route('contact_us') }}" method="post" class="text_align_left">
                     {{ csrf_field() }}
-                    <input type="text" name="firstname" placeholder="First Name" class="contact_form_name">
-                    <input type="text" name="email" placeholder="Email" class="contact_form_email">
-                    <input type="text" name="lastname" placeholder="Last Name">
-                    <input type="text" name="phone" placeholder="Phone">
-                    <textarea name="message" placeholder="Message"></textarea>
+                    <input type="text" name="firstname" placeholder="{{ trans('pages/contact.first_name') }}" class="contact_form_name">
+                    <input type="text" name="email" placeholder="{{ trans('pages/contact.email') }}" class="contact_form_email">
+                    <input type="text" name="lastname" placeholder="{{ trans('pages/contact.last_name') }}">
+                    <input type="text" name="phone" placeholder="{{ trans('pages/contact.phone') }}">
+                    <textarea name="message" placeholder="{{ trans('pages/contact.message') }}"></textarea>
                     <input type="submit" value="{{ trans('pages/contact.send') }}" class="contact_form_submit">
                 </form>
 

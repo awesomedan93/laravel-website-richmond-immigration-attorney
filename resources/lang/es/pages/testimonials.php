@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'title' => 'Let us build a strong case for you.',
-    'sub_title' => 'Client Reviews',
+    'title' => 'Permítanos construir un caso fuerte para usted.',
+    'sub_title' => 'Opiniones de los Clientes',
 
-    'lorena' => 'I want to thank Mrs. Soulmaz for helping me with my immigration paperwork till the very end, for not leaving me alone and for always being there for me. I feel blessed for finding this attorney. Blessings',
-    'umar' => 'I am a highly satisfied client! Because of you, I got a green card. You are efficient and have saved a lot of my time in handling my complicated immigration case. I will always stay with you for all my legal and immigration advice. I am also highly recommending you to all my friends and colleagues for immigration/ criminal issues.',
-    'norma' => 'I highly recommend Attorney Soulmaz Taghavi. She fought hard to get me and my daughter asylum status. I am grateful and very satisfied with her work. Thank you, Soulmaz.',
-    'nan' => 'After I switched my case to your firm, I felt the professionalism from you and your firm. Also I don\'t feel like I got treated like a client, I was treated more like a friend who\'s hopeless seeking for help and you are the only friend who can help me. Keep it up',
-    'kamal' => 'I can be a very selective person when it comes to fateful cases such as immigration. When I wanted to bring my fiancé to the states, I met with many lawyers in town to discuss the process and paperwork for the visa. Soulmaz was my favorite among them all! I was 100% satisfied to hire her because she is very sincere, knowledgeable, and will do her best to win your case. Now, she is working on my wife’s green card as well. All in all, she is highly recommended!',
+    'lorena' => 'Quiero agradecer a la señora Soulmaz por ayudarme con mi documentación de inmigración hasta el final, por no dejarme sola y por estar siempre ahí para mí. Me siento bendecida por encontrar a esta abogada',
+    'umar' => 'Soy un cliente muy satisfecho, gracias a usted, obtuve una green card (residencia), es eficiente y me ha ahorrado mucho tiempo manejando mi complicado caso de inmigración, siempre estaré con usted para todas mis consultas legales y de inmigración. También lo estoy recomendando con todos mis amigos y colegas para cuestiones de inmigración y criminalidad',
+    'norma' => 'Recomiendo ampliamente a la abogada Soulmaz Taghavi, que luchó mucho para que yo y mi hija tuviéramos el estatus de asilo, estoy agradecido y muy satisfecho con su trabajo, gracias Soulmaz',
+    'nan' => 'Después de que cambié mi caso a su firma, sentí el profesionalismo de usted y de su firma. Además, no siento que fui tratado como un cliente, más bien fui tratado como un amigo desesperado en busca ayuda y usted es el único amigo que puede ayudarme. Siga así',
+    'kamal' => 'Puedo ser una persona muy selectiva cuando se trata de casos fatales como inmigración. Cuando quise llevar a mi prometido a los Estados Unidos, me reuní con muchos abogados en la ciudad para discutir el proceso y papeleo para la visa. ¡Soulmaz fue mi favorita de entre todos los demás! Yo estuvo 100% satisfecho de contratarla porque ella es muy sincera, bien informada, y hará todo lo posible para ganar su caso. Ahora, ella está trabajando en la green card (residencia) de mi esposa también. En general, ¡ella es altamente recomendada!',
 ];

@@ -26,5 +26,6 @@ return [
     'attorneys' => 'Attorneys',
     'testimonials' => 'Reviews',
     'blog' => 'Blog',
-    'contact' => 'Contact'
+    'contact' => 'Contact',
+    'get_in_touch' => 'Get in Touch'
 ];
