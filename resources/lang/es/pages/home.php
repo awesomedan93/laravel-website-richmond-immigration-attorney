@@ -33,7 +33,7 @@ return [
     'dui_law_img_alt' => 'Abogado de inmigracion petersburg va',
 
     //Testimonial
-    'testimonial' => '<p>"I am a highly satisfied client! Because of you, I got a green card. You are efficient and have saved a lot of my time in handling my complicated immigration case.</p>
-                <p>I will always stay with you for all my legal and immigration advice. I am also highly recommending you to all my friends and colleagues for immigration/ criminal issues.</p>'
+    'testimonial' => '<p>"Soy un cliente muy satisfecho, gracias a usted, obtuve una green card (residencia), es eficiente y me ha ahorrado mucho tiempo manejando mi complicado caso de inmigración, siempre estaré con usted para todas mis consultas legales y de inmigración.</p>
+                <p>También lo estoy recomendando con todos mis amigos y colegas para cuestiones de inmigración y criminalidad".</p>'
 
 ];

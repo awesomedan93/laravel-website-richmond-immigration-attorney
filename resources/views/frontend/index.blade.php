@@ -80,7 +80,7 @@
                 {{ trans('general.get_in_touch') }}
             </h2>
             <span>
-                {{ trans('pages/home.contact_us_now') }}
+                {{ trans('pages/contact.contact_us_now') }}
             </span>
             <br><br><br>
             <div class="contact_form">
@@ -99,7 +99,12 @@
                 </form>
                 <span class="terms">{!! trans('pages/contact.agreed_terms_text') !!}</span>
                 <br><br>
-                <img src="{{ asset('img/icons/fb.png') }}">
+                <div class="socials-home">
+
+                    <a href="https://plus.google.com/+NovoTaghaviRichmond" target="_blank"><img src="{{ asset('img/icons/g+.png') }}"></a>
+                    <a href="https://www.facebook.com/novotaghavi/" target="_blank"><img src="{{ asset('img/icons/fb-top.png') }}"></a>
+                    <a href="https://www.youtube.com/channel/UCMbsWtzxAwuVBmM0I0ZZCJg" target="_blank"><img src="{{ asset('img/icons/yt.png') }}"></a>
+                </div>
             </div>
         </div>
     </div>

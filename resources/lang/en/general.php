@@ -27,5 +27,8 @@ return [
     'testimonials' => 'Reviews',
     'blog' => 'Blog',
     'contact' => 'Contact',
-    'get_in_touch' => 'Get in Touch'
+    'get_in_touch' => 'Get in Touch',
+    'read_more' => 'Leer más',
+    'featured_posts' => 'Publicaciones destacadas',
+    'recent_posts' => 'Mensajes recientes'
 ];

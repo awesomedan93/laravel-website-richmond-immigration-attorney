@@ -742,3 +742,6 @@ a.article_title:hover {
     text-align: center;
     display: block;
 }
+.socials-home a {
+    display: inline-block;
+}

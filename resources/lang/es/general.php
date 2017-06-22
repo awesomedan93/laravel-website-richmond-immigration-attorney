@@ -3,7 +3,7 @@
 return [
     'learn_more' => 'Aprender más',
     'practice_areas' => 'Áreas de Práctica',
-    'more_testimonials' => 'More Reviews',
+    'more_testimonials' => 'Más Opiniones',
     'attorney' => 'Abogado',
     'email' => 'Email',
     'phone' => 'Teléfono',

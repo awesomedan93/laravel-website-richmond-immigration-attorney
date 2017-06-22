@@ -24,7 +24,7 @@
                             <p>
                                 {!! excerpt(strip_tags($postTranslation->body)) !!}
                                 <div class="clear"></div>
-                                <a href="{{ url('blog/'.$postTranslation->slug) }}" class="button read_more float_left">Read more</a>
+                                <a href="{{ url('blog/'.$postTranslation->slug) }}" class="button read_more float_left">{{ trans('general.read_more') }}</a>
                             </p>
 
                         </div>

@@ -29,7 +29,7 @@
             <div class="sidebar">
                 <div class="widget">
                 <span class="widget_title">
-                    Featured Posts
+                    {{ trans('general.featured_posts') }}
                 </span>
                     @foreach($featured as $post)
                         <a href="{{ url('blog/'.$post->slug) }}">
@@ -44,7 +44,7 @@
 
                 <div class="widget">
                 <span class="widget_title">
-                    Recent Posts
+                    {{ trans('general.recent_posts') }}
                 </span>
                     @foreach($latest as $post)
                         <a href="{{ url('blog/'.$post->slug) }}">
