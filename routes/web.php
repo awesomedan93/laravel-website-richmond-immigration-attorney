@@ -1,7 +1,7 @@
 <?php
 //// FRONT END PAGES
 Route::get('/.well-known/acme-challenge/apL8Jqt4g71mS9reVDxdSOnyQCc_tY8-i5T1fC-t1WE', function(){
-    dd(2);
+    echo 'apL8Jqt4g71mS9reVDxdSOnyQCc_tY8-i5T1fC-t1WE.4MfIFZPmLCf3Wvmdymwfmvr9oP5Llr5eSbsHJoP_eFk';
 });
 Route::group([
         'prefix' => LaravelLocalization::setLocale(),
