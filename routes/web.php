@@ -1,5 +1,8 @@
 <?php
 //// FRONT END PAGES
+Route::get('/.well-known/acme-challenge/apL8Jqt4g71mS9reVDxdSOnyQCc_tY8-i5T1fC-t1WE', function(){
+    dd(2);
+});
 Route::group([
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
