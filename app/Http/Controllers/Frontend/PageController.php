@@ -141,7 +141,7 @@ class PageController extends Controller
         $msg = 'Message: '.$inputData['message']. "\n".'Phone: '.$inputData['phone'];
         $success = mail($to,$inputData['firstname'],$msg,$headers);
 
-        if(true == true){
+        if($success){
             $request->session()->flash('alert-success', 'Email has been sent!');
         }else{
             $request->session()->flash('alert-danger', 'Something wrong!');
@@ -159,7 +159,7 @@ class PageController extends Controller
         $msg = 'Message: '.$inputData['message']. "\n".'Phone: '.$inputData['phone'];
         $success = mail($to,$inputData['firstname'],$msg,$headers);
 
-        if(true == true){
+        if($success){
             $request->session()->flash('alert-success', 'Email has been sent!');
         }else{
             $request->session()->flash('alert-danger', 'Something wrong!');
