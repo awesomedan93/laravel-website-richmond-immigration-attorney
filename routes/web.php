@@ -23,7 +23,7 @@ Route::group([
     Route::get('/blog/{slug}', 'Frontend\PostController@show')->name('blog.post');
 
     Route::get('/contact', 'Frontend\PageController@show')->name('pages.contact');
-    Route::get('/terms-and-conditions', 'Frontend\PostController@show')->name('pages.terms_and_conditions');
+    Route::get('/terms-and-conditions', 'Frontend\PageController@show')->name('pages.terms_and_conditions');
 
     Route::post('/contact', ['as' => 'contact_us', 'uses' => 'Frontend\PageController@sendEmail']);
 });
