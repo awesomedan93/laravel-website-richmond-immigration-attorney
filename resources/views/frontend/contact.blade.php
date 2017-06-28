@@ -22,8 +22,16 @@
                     @endforeach
 
                 </div> <!-- end .flash-message -->
-                <form action="{{ route('contact_us') }}" method="post" class="text_align_left">
+                <a id="success"></a>
+                <form action="{{ route('contact_us') }}" id="contact-form-richmond" method="post" class="text_align_left">
+                    @foreach (['danger', 'success'] as $msg)
+                        @if(Session::has('alert-' . $msg))
+
+                            <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}</p>
+                        @endif
+                    @endforeach
                     {{ csrf_field() }}
+                    <div id="success_message" style="display:none;" > Success! </div>
                     <input type="text" name="firstname" placeholder="{{ trans('pages/contact.first_name') }}" class="contact_form_name">
                     <input type="text" name="email" placeholder="{{ trans('pages/contact.email') }}" class="contact_form_email">
                     <input type="text" name="lastname" placeholder="{{ trans('pages/contact.last_name') }}">
@@ -51,7 +59,35 @@
     </div>
 @stop
 @section('custom-footer-js')
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script>
+
+        $(function() {
+            $('#contact-form-richmond').validate({ // initialize the plugin
+                rules: {
+                    firstname: {
+                        required: true
+                    },
+                    lastname: {
+                        required: true
+                    },
+                    phone: {
+                        required: true
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                errorPlacement: function () {
+                    return false;
+                },
+                submitHandler: function (form) { // for demo
+//                    $('#success_message').show();
+                    return true; // for demo
+                }
+            });
+        });
+
         var map;
         function initMap() {
             var RaulLawLatLong = new google.maps.LatLng(37.600269150473515,-77.54628222513122);

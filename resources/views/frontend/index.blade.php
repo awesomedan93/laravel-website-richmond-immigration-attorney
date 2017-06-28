@@ -84,8 +84,17 @@
             </span>
             <br><br><br>
             <div class="contact_form">
-                <form class="text_align_left">
+                <a id="success"></a>
+                <form action="{{ route('contact_us_home') }}" method="post" class="text_align_left" id="contact-form-richmond">
 
+                    @foreach (['danger', 'success'] as $msg)
+                        @if(Session::has('alert-' . $msg))
+
+                            <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}</p>
+                        @endif
+                    @endforeach
+
+                    {{ csrf_field() }}
                     <input type="text" name="firstname" placeholder="{{ trans('pages/contact.first_name') }}" class="contact_form_name">
 
                     <input type="text" name="email" placeholder="Email" class="contact_form_email">
@@ -94,7 +103,7 @@
 
                     <input type="text" name="phone" placeholder="{{ trans('pages/contact.phone') }}">
 
-                    <textarea name="message" placeholder="{{ trans('pages/contact.first_name') }}"></textarea>
+                    <textarea name="message" placeholder="{{ trans('pages/contact.message') }}"></textarea>
                     <input type="submit" value="{{ trans('pages/contact.send') }}" class="contact_form_submit">
                 </form>
                 <span class="terms">{!! trans('pages/contact.agreed_terms_text') !!}</span>
@@ -110,8 +119,33 @@
     </div>
 @stop
 @section('custom-footer-js')
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script>
+
     $(function() {
+        $('#contact-form-richmond').validate({ // initialize the plugin
+            rules: {
+                firstname: {
+                    required: true
+                },
+                lastname: {
+                    required: true
+                },
+                phone: {
+                    required: true
+                },
+                message: {
+                    required: true
+                }
+            },
+            errorPlacement: function(){
+                return false;
+            },
+            submitHandler: function (form) { // for demo
+                //$('#success_message').show();
+                return true; // for demo
+            }
+        });
         $('.parallax').parallax({
             imageSrc: '{{ asset("img/slider_bg.png") }}',speed:0.3,naturalWidth:1500,nautralHeight:527
         });

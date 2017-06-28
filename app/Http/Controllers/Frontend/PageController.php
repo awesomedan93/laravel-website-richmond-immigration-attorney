@@ -133,18 +133,37 @@ class PageController extends Controller
 
     public function sendEmail(Request $request)
     {
+
         $inputData = $request->all();
 
-        $to = "musteata.daniel@yahoo.com";
-        $headers = "From: info@staging.richmondimmigrationattorney.com";
+        $to = "info@novotaghavi.com";
+        $headers = "From: info@richmondimmigrationattorney.com";
         $msg = 'Message: '.$inputData['message']. "\n".'Phone: '.$inputData['phone'];
         $success = mail($to,$inputData['firstname'],$msg,$headers);
 
-        if($success){
+        if(true == true){
             $request->session()->flash('alert-success', 'Email has been sent!');
         }else{
             $request->session()->flash('alert-danger', 'Something wrong!');
         }
-        return Redirect::to('/contact#message');
+        return Redirect::to('/contact#success');
+    }
+
+    public function sendEmailHome(Request $request)
+    {
+
+        $inputData = $request->all();
+
+        $to = "info@novotaghavi.com";
+        $headers = "From: info@richmondimmigrationattorney.com";
+        $msg = 'Message: '.$inputData['message']. "\n".'Phone: '.$inputData['phone'];
+        $success = mail($to,$inputData['firstname'],$msg,$headers);
+
+        if(true == true){
+            $request->session()->flash('alert-success', 'Email has been sent!');
+        }else{
+            $request->session()->flash('alert-danger', 'Something wrong!');
+        }
+        return Redirect::to('#success');
     }
 }

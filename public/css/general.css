@@ -745,3 +745,11 @@ a.article_title:hover {
 .socials-home a {
     display: inline-block;
 }
+input.error,.error {
+    border:2px solid red;
+}
+.alert-success {
+    color:green;
+    text-align: center;
+    font-size: 22px;
+}
