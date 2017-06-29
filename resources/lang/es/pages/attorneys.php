@@ -5,6 +5,7 @@ return [
     'sub_title' => 'Permítanos construir un caso fuerte para usted.',
     'page_description' => 'Raúl Novo y Soulmaz Taghavi tienen una experiencia combinada de 20 años en tribunales federales y locales. Son abogados apasionados, agresivos y tenaces.',
     'attorney' => 'Abogado',
+    'attorney_female' => 'Abogada',
     'about_raul' => 'Raúl Novo es Socio y Cofundador de Novo Taghavi, ubicado en Richmond Virginia, donde su práctica amplía la Ley de Defensa Criminal y de Tránsito, y Ley de Inmigración.',
     'about_soulmaz' => 'Soulmaz Taghavi is a Partner and Co-Founder of Novo Taghavi, located in Richmond, Virginia where her practice expands Immigration Law, Criminal & Traffic Defense and Family Law.',
     'learn_more_about_raul' => 'Más información sobre Raúl',

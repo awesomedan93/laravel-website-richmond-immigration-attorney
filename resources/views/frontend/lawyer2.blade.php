@@ -14,7 +14,7 @@
 
 
                 <span class="lawyer_sub_block_right">
-                <h6>{{ trans('general.attorney') }}</h6>
+                <h6>{{ trans('pages/attorneys.attorney_female') }}</h6>
                 <h2 class="blue_title">Soulmaz Taghavi</h2>
                 <div class="contact_lawyer">
                     <a href="mailto:soulmaz@novotaghavi.com" class="button blue_button responsive_align">{{ trans('general.email_me') }}</a>
