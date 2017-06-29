@@ -18,7 +18,7 @@ return [
 
     //Menu
     'about' => 'Sobre',
-    'cases_we_handle' => 'Casos que manejamos',
+    'cases_we_handle' => 'Casos Que Manejamos',
         'case_criminal_defense' => 'Defensa Criminal',
         'case_immigration_law' => 'Ley de Inmigración',
         'case_traffic_law' => 'Ley de Tráfico',

@@ -63,24 +63,24 @@
     <a href="#" class="menu-close">&times;</a>
     <ul>
         <li>
-            <a href="{{ url('/about') }}">About</a>
-            <a href="{{ url('/cases') }}">Cases we handle</a>
+            <a href="{{ url('/about') }}">{{ trans('general.about') }}</a>
+            <a href="{{ url('/cases') }}">{{ trans('general.cases_we_handle') }}</a>
             <ul class="sub-menu-items">
-                <li><a href="{{ url('/cases/criminal-defense') }}">Criminal Defense</a></li>
-                <li><a href="{{ url('/cases/immigration_law') }}">Immigration Law</a></li>
-                <li><a href="{{ url('/cases/traffic-law') }}">Traffic Law</a></li>
-                <li><a href="{{ url('/cases/dui-law') }}">DUI Law</a></li>
+                <li><a href="{{ url('/cases/criminal-defense') }}">{{ trans('general.case_criminal_defense') }}</a></li>
+                <li><a href="{{ url('/cases/immigration_law') }}">{{ trans('general.case_immigration_law') }}</a></li>
+                <li><a href="{{ url('/cases/traffic-law') }}">{{ trans('general.case_traffic_law') }}</a></li>
+                <li><a href="{{ url('/cases/dui-law') }}">{{ trans('general.case_dui_law') }}</a></li>
             </ul>
         </li>
         <li>
-            <a href="{{ url('/attorneys') }}">Attorneys</a>
-            <ul class="sub-menu">
+            <a href="{{ url('/attorneys') }}">{{ trans('general.attorneys') }}</a>
+            <ul class="sub-menu-items">
                 <li><a href="{{ url('/attorneys/raul-novo') }}">Raul Novo</a></li>
                 <li><a href="{{ url('/attorneys/soulmaz-taghavi') }}">Soulmaz Taghavi</a></li>
             </ul>
         </li>
-        <li><a href="{{ url('/reviews') }}">Reviews</a></li>
-        <li><a href="{{ url('/blog') }}">Blog</a></li>
-        <li><a href="{{ url('/contact') }}">Contact</a></li>
+        <li><a href="{{ url('/reviews') }}">{{ trans('general.testimonials') }}</a></li>
+        <li><a href="{{ url('/blog') }}">{{ trans('general.blog') }}</a></li>
+        <li><a href="{{ url('/contact') }}">{{ trans('general.contact') }}</a></li>
     </ul>
 </div>
