@@ -21,7 +21,7 @@
                     <a href="{{ url('/cases/criminal-defense') }}" class="button orange_button responsive_align">{{ trans('general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/cases.criminal_defense_img')" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/cases.criminal_defense_img')" alt="@lang('pages/cases.criminal_defense_alt')" class="cases_sub_block_right"></a>
 
             </div>
             <div class="case_block">
@@ -32,7 +32,7 @@
                     <a href="{{ url('/cases/immigration_law') }}" class="button orange_button responsive_align">{{ trans('general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/immigration_law') }}"><img src="@lang('pages/cases.immigration_law_img')" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/immigration_law') }}"><img src="@lang('pages/cases.immigration_law_img')" alt="@lang('pages/cases.immigration_law_alt')" class="cases_sub_block_right"></a>
 
             </div>
             <div class="case_block">
@@ -43,7 +43,7 @@
                     <a href="{{ url('/cases/traffic-law') }}" class="button orange_button responsive_align">{{ trans('general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/traffic-law') }}"><img src="@lang('pages/cases.traffic_law_img')" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/traffic-law') }}"><img src="@lang('pages/cases.traffic_law_img')" alt="@lang('pages/cases.traffic_law_alt')"  class="cases_sub_block_right"></a>
 
             </div>
             <div class="case_block">
@@ -54,7 +54,7 @@
                     <a href="{{ url('/cases/dui-law') }}" class="button orange_button responsive_align">{{ trans('general.learn_more') }}</a>
                 </div>
 
-                <a href="{{ url('/cases/dui-law') }}"><img src="@lang('pages/cases.dui_law_img')" class="cases_sub_block_right"></a>
+                <a href="{{ url('/cases/dui-law') }}"><img src="@lang('pages/cases.dui_law_img')" alt="@lang('pages/cases.dui_law_alt')" class="cases_sub_block_right"></a>
 
             </div>
 
