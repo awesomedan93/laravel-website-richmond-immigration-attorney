@@ -10,7 +10,7 @@
         <h6>{{ trans('pages/about.subtitle') }}</h6>
         <p>{{ trans('pages/about.first_paragraph') }}</p>
         <p>{{ trans('pages/about.second_paragraph') }}</p>
-        <a href="{{ url('/contact') }}" class="button blue_button float_left">{{ trans('pages/about.get_in_touch') }}</a>
+        <a href="{{ LaravelLocalization::getLocalizedURL(null, '/contact') }}" class="button blue_button float_left">{{ trans('pages/about.get_in_touch') }}</a>
         <br><br><br>
     </div>
     <div class="about_us_right_block">

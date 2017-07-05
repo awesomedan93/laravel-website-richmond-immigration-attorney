@@ -9,7 +9,7 @@
             {!! trans('pages/cases/criminal_defense.page_content') !!}
 
             <br><br>
-            <a href="{{ url('/cases') }}" class="button orange_button responsive_align">{{ trans('general.practice_areas') }}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases') }}" class="button orange_button responsive_align">{{ trans('general.practice_areas') }}</a>
             <br><br>
         </div>
     </div>

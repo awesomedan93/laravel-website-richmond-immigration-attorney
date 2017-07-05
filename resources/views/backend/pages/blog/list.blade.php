@@ -54,7 +54,7 @@
                                     </td>
                                     <td>{{ $post->published_at }}</td>
                                     <td>
-                                        <a href="{{ url('blog/'.$post->slug) }}" target="_blank" role="button" class="btn btn-link btn-xs">View</a>
+                                        <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$post->slug) }}" target="_blank" role="button" class="btn btn-link btn-xs">View</a>
                                         <a href="{{ route('blog.edit',$post->id) }}" role="button" class="btn btn-primary btn-xs">Edit</a>
 
                                         <button type="submit" data-id="{{ $post->id }}" class="btn btn-danger btn-xs button-delete-post">Delete</button>

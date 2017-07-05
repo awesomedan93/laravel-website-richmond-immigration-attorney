@@ -11,20 +11,20 @@
 
                     <article>
                         
-                        <a href="{{ url('blog/'.$postTranslation->slug) }}" class="article_title">{{ $postTranslation->title }}</a><br>
+                        <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$postTranslation->slug) }}" class="article_title">{{ $postTranslation->title }}</a><br>
                         <span class="">{{ $postTranslation->pulished_at }}</span>
                         <div class="article_content">
 
                             <div class="article_image">
 
                                 @if(!empty($postTranslation->post->image))
-                                    <a href="{{ url('blog/'.$postTranslation->slug) }}"><img src="{{ asset($postTranslation->post->image) }}"></a>
+                                    <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$postTranslation->slug) }}"><img src="{{ asset($postTranslation->post->image) }}"></a>
                                 @endif
                             </div>
                             <p>
                                 {!! excerpt(strip_tags($postTranslation->body)) !!}
                                 <div class="clear"></div>
-                                <a href="{{ url('blog/'.$postTranslation->slug) }}" class="button read_more float_left">{{ trans('general.read_more') }}</a>
+                                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$postTranslation->slug) }}" class="button read_more float_left">{{ trans('general.read_more') }}</a>
                             </p>
 
                         </div>
@@ -42,7 +42,7 @@
                     Featured Posts
                 </span>
                     @foreach($featured as $post)
-                    <a href="{{ url('blog/'.$post->slug) }}">
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$post->slug) }}">
                         @if(!empty($post->post->image))
                             <img src="{{ asset($post->post->image) }}">
                         @endif
@@ -57,7 +57,7 @@
                     Recent Posts
                 </span>
                     @foreach($latest as $post)
-                        <a href="{{ url('blog/'.$post->slug) }}">
+                        <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$post->slug) }}">
                             @if(!empty($post->post->image))
                                 <img src="{{ asset($post->post->image) }}">
                             @endif

@@ -9,7 +9,7 @@
             <br>
             {!! trans('pages/cases/traffic_law.page_content') !!}
             <br><br>
-            <a href="{{ url('/cases') }}" class="button orange_button responsive_align">{{ trans('general.practice_areas') }}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases') }}" class="button orange_button responsive_align">{{ trans('general.practice_areas') }}</a>
             <br><br>
         </div>
     </div>
@@ -20,7 +20,7 @@
 
                 {!! trans('pages/cases/traffic_law.testimonial_content') !!}
             </div>
-            <a href="{{ url('/reviews') }}" class="button blue_button align_right">{{ trans('general.more_testimonials') }}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/reviews') }}" class="button blue_button align_right">{{ trans('general.more_testimonials') }}</a>
             <div class="clear"></div>
         </div>
     </div>

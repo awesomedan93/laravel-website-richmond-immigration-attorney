@@ -20,7 +20,7 @@
                 <h6>{{ trans('general.attorney') }}</h6>
                 <h2 class="blue_title">Raul Novo</h2>
                 <p>{{ trans('pages/attorneys.about_raul') }}</p>
-                <a href="{{ url('/attorneys/raul-novo') }}" class="button blue_button responsive_align">{{ trans('pages/attorneys.learn_more_about_raul') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys/raul-novo') }}" class="button blue_button responsive_align">{{ trans('pages/attorneys.learn_more_about_raul') }}</a>
             </span>
 
         </div>
@@ -31,7 +31,7 @@
                 <h6>{{ trans('pages/attorneys.attorney_female') }}</h6>
                 <h2 class="blue_title">Soulmaz Taghavi</h2>
                 <p>{{ trans('pages/attorneys.about_soulmaz') }}</p>
-                <a href="{{ url('/attorneys/soulmaz-taghavi') }}" class="button blue_button">{{ trans('pages/attorneys.learn_more_about_soulmaz') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys/soulmaz-taghavi') }}" class="button blue_button">{{ trans('pages/attorneys.learn_more_about_soulmaz') }}</a>
             </span>
 
         </div>

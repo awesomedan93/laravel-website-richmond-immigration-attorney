@@ -32,7 +32,7 @@
                     {{ trans('general.featured_posts') }}
                 </span>
                     @foreach($featured as $post)
-                        <a href="{{ url('blog/'.$post->slug) }}">
+                        <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$post->slug) }}">
                             @if(!empty($post->post->image))
                                 <img src="{{ asset($post->post->image) }}">
                             @endif
@@ -47,7 +47,7 @@
                     {{ trans('general.recent_posts') }}
                 </span>
                     @foreach($latest as $post)
-                        <a href="{{ url('blog/'.$post->slug) }}">
+                        <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog/'.$post->slug) }}">
                             @if(!empty($post->post->image))
                                 <img src="{{ asset($post->post->image) }}">
                             @endif

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="slider_title">{{ trans('pages/home.title') }}</div>
             <div class="align_center">
-                <a href="{{ url('/contact') }}" class="button slider_button">{{ trans('pages/home.get_in_touch') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, '/contact') }}" class="button slider_button">{{ trans('pages/home.get_in_touch') }}</a>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
 
                 <p>{{ trans('pages/home.about_description') }}</p>
                 <br>
-                <a href="{{ url('/about') }}" class="button blue_button">{{ trans('pages/home.learn_more_about_us') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, '/about') }}" class="button blue_button">{{ trans('pages/home.learn_more_about_us') }}</a>
             </div>
         </div>
     </div>
@@ -36,13 +36,13 @@
                         <h3 class="blue_title">{{ trans('pages/home.crimminal_defense') }}</h3>
                     </div>
 
-                    <a href="{{ url('/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" alt="@lang('pages/home.crimminal_defense_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" alt="@lang('pages/home.crimminal_defense_img_alt')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
                         <h3 class="blue_title">{{ trans('pages/home.immigration_law') }}</h3>
                     </div>
-                    <a href="{{ url('/cases/immigration_law') }}"><img src="@lang('pages/home.immigration_law_img')" alt="@lang('pages/home.immigration_law_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/immigration_law') }}"><img src="@lang('pages/home.immigration_law_img')" alt="@lang('pages/home.immigration_law_img_alt')"></a>
                 </div>
             </div>
             <div class="clear"></div>
@@ -51,13 +51,13 @@
                     <div class="blue_square_title">
                         <h3 class="blue_title">{{ trans('pages/home.traffic_law') }}</h3>
                     </div>
-                    <a href="{{ url('/cases/traffic-law') }}"><img src="@lang('pages/home.traffic_law_img')" alt="@lang('pages/home.traffic_law_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/traffic-law') }}"><img src="@lang('pages/home.traffic_law_img')" alt="@lang('pages/home.traffic_law_img_alt')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
                         <h3 class="blue_title">{{ trans('pages/home.dui_law') }}</h3>
                     </div>
-                    <a href="{{ url('/cases/dui-law') }}"><img src="@lang('pages/home.dui_law_img')" alt="@lang('pages/home.dui_law_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/dui-law') }}"><img src="@lang('pages/home.dui_law_img')" alt="@lang('pages/home.dui_law_img_alt')"></a>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
                 <div class="quote_icon"></div><div class="text_align_right">- Umar</div>
                 {!! trans('pages/home.testimonial') !!}
             </div>
-            <a href="{{ url('/reviews') }}" class="button blue_button">{{ trans('general.more_testimonials')}}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/reviews') }}" class="button blue_button">{{ trans('general.more_testimonials')}}</a>
             <div class="clear"></div>
         </div>
     </div>

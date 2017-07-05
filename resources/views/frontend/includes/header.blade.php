@@ -2,7 +2,7 @@
 <header class="header">
     <div class="container">
 
-        <a href="{{ url('/') }}" class="logo_href"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"><div class="clear"></div><span>RichmondImmigrationAttorney.com</span>
+        <a href="{{ LaravelLocalization::getLocalizedURL(null, '/') }}" class="logo_href"><img src="{{ asset('img/raul-novo-soulmaz-taghavi-lawyers.png') }}" class="logo" alt="raul novo soulmaz taghavi lawyers"><div class="clear"></div><span>RichmondImmigrationAttorney.com</span>
         </a>
 
         <div class="socials">
@@ -17,32 +17,32 @@
     <div class="container nav_items">
         <ul class="nav_left_block">
             <li>
-                <a href="{{ url('about') }}">{{ trans('general.about') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'about') }}">{{ trans('general.about') }}</a>
             </li>
             <li>
-                <a href="{{ url('cases') }}">{{ trans('general.cases_we_handle') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'cases') }}">{{ trans('general.cases_we_handle') }}</a>
                 <ul class="sub-menu">
-                    <li><a href="{{ url('/cases/criminal-defense') }}">{{ trans('general.case_criminal_defense') }}</a></li>
-                    <li><a href="{{ url('/cases/immigration_law') }}">{{ trans('general.case_immigration_law') }}</a></li>
-                    <li><a href="{{ url('/cases/traffic-law') }}">{{ trans('general.case_traffic_law') }}</a></li>
-                    <li><a href="{{ url('/cases/dui-law') }}">{{ trans('general.case_dui_law') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/criminal-defense') }}">{{ trans('general.case_criminal_defense') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/immigration_law') }}">{{ trans('general.case_immigration_law') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/traffic-law') }}">{{ trans('general.case_traffic_law') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/dui-law') }}">{{ trans('general.case_dui_law') }}</a></li>
                 </ul>
             </li>
             <li>
-                <a href="{{ url('attorneys') }}">{{ trans('general.attorneys') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'attorneys') }}">{{ trans('general.attorneys') }}</a>
                 <ul class="sub-menu">
-                    <li><a href="{{ url('/attorneys/raul-novo') }}">Raul Novo</a></li>
-                    <li><a href="{{ url('/attorneys/soulmaz-taghavi') }}">Soulmaz Taghavi</a></li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys/raul-novo') }}">Raul Novo</a></li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys/soulmaz-taghavi') }}">Soulmaz Taghavi</a></li>
                 </ul>
             </li>
             <li>
-                <a href="{{ url('reviews') }}">{{ trans('general.testimonials') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'reviews') }}">{{ trans('general.testimonials') }}</a>
             </li>
             <li>
-                <a href="{{ url('blog') }}">{{ trans('general.blog') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'blog') }}">{{ trans('general.blog') }}</a>
             </li>
             <li>
-                <a href="{{ url('contact') }}">{{ trans('general.contact') }}</a>
+                <a href="{{ LaravelLocalization::getLocalizedURL(null, 'contact') }}">{{ trans('general.contact') }}</a>
             </li>
         </ul>
         <!-- END: NAV -->
@@ -63,24 +63,24 @@
     <a href="#" class="menu-close">&times;</a>
     <ul>
         <li>
-            <a href="{{ url('/about') }}">{{ trans('general.about') }}</a>
-            <a href="{{ url('/cases') }}">{{ trans('general.cases_we_handle') }}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/about') }}">{{ trans('general.about') }}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases') }}">{{ trans('general.cases_we_handle') }}</a>
             <ul class="sub-menu-items">
-                <li><a href="{{ url('/cases/criminal-defense') }}">{{ trans('general.case_criminal_defense') }}</a></li>
-                <li><a href="{{ url('/cases/immigration_law') }}">{{ trans('general.case_immigration_law') }}</a></li>
-                <li><a href="{{ url('/cases/traffic-law') }}">{{ trans('general.case_traffic_law') }}</a></li>
-                <li><a href="{{ url('/cases/dui-law') }}">{{ trans('general.case_dui_law') }}</a></li>
+                <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/criminal-defense') }}">{{ trans('general.case_criminal_defense') }}</a></li>
+                <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/immigration_law') }}">{{ trans('general.case_immigration_law') }}</a></li>
+                <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/traffic-law') }}">{{ trans('general.case_traffic_law') }}</a></li>
+                <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/dui-law') }}">{{ trans('general.case_dui_law') }}</a></li>
             </ul>
         </li>
         <li>
-            <a href="{{ url('/attorneys') }}">{{ trans('general.attorneys') }}</a>
+            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys') }}">{{ trans('general.attorneys') }}</a>
             <ul class="sub-menu-items">
-                <li><a href="{{ url('/attorneys/raul-novo') }}">Raul Novo</a></li>
-                <li><a href="{{ url('/attorneys/soulmaz-taghavi') }}">Soulmaz Taghavi</a></li>
+                <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys/raul-novo') }}">Raul Novo</a></li>
+                <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/attorneys/soulmaz-taghavi') }}">Soulmaz Taghavi</a></li>
             </ul>
         </li>
-        <li><a href="{{ url('/reviews') }}">{{ trans('general.testimonials') }}</a></li>
-        <li><a href="{{ url('/blog') }}">{{ trans('general.blog') }}</a></li>
-        <li><a href="{{ url('/contact') }}">{{ trans('general.contact') }}</a></li>
+        <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/reviews') }}">{{ trans('general.testimonials') }}</a></li>
+        <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/blog') }}">{{ trans('general.blog') }}</a></li>
+        <li><a href="{{ LaravelLocalization::getLocalizedURL(null, '/contact') }}">{{ trans('general.contact') }}</a></li>
     </ul>
 </div>
