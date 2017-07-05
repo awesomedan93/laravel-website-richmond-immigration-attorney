@@ -3,7 +3,7 @@
 ///
 Route::group([
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+        'middleware' => [ 'localizationRedirect' ]
     ], function() {
 
     Route::get('/', 'Frontend\PageController@show')->name('pages.home');
