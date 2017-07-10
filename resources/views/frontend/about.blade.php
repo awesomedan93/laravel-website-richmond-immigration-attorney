@@ -14,7 +14,7 @@
         <br><br><br>
     </div>
     <div class="about_us_right_block">
-        <img src="@lang('pages/about.about_us_image')" alt="@lang('pages/about.about_us_image_alt')">
+        <img src="@lang('pages/about.about_us_image')" title="@lang('pages/about.about_us_image_alt')" alt="@lang('pages/about.about_us_image_alt')">
     </div>
 
     <div class="clear"></div>

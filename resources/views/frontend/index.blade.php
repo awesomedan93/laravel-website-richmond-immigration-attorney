@@ -36,13 +36,13 @@
                         <h3 class="blue_title">{{ trans('pages/home.crimminal_defense') }}</h3>
                     </div>
 
-                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" alt="@lang('pages/home.crimminal_defense_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/criminal-defense') }}"><img src="@lang('pages/home.crimminal_defense_img')" title="@lang('pages/home.crimminal_defense_img_alt')" alt="@lang('pages/home.crimminal_defense_img_alt')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
                         <h3 class="blue_title">{{ trans('pages/home.immigration_law') }}</h3>
                     </div>
-                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/immigration_law') }}"><img src="@lang('pages/home.immigration_law_img')" alt="@lang('pages/home.immigration_law_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/immigration_law') }}"><img src="@lang('pages/home.immigration_law_img')" title="@lang('pages/home.immigration_law_img_alt')" alt="@lang('pages/home.immigration_law_img_alt')"></a>
                 </div>
             </div>
             <div class="clear"></div>
@@ -51,13 +51,13 @@
                     <div class="blue_square_title">
                         <h3 class="blue_title">{{ trans('pages/home.traffic_law') }}</h3>
                     </div>
-                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/traffic-law') }}"><img src="@lang('pages/home.traffic_law_img')" alt="@lang('pages/home.traffic_law_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/traffic-law') }}"><img src="@lang('pages/home.traffic_law_img')" title="@lang('pages/home.traffic_law_img_alt')" alt="@lang('pages/home.traffic_law_img_alt')"></a>
                 </div>
                 <div class="right_square">
                     <div class="blue_square_title">
                         <h3 class="blue_title">{{ trans('pages/home.dui_law') }}</h3>
                     </div>
-                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/dui-law') }}"><img src="@lang('pages/home.dui_law_img')" alt="@lang('pages/home.dui_law_img_alt')"></a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/cases/dui-law') }}"><img src="@lang('pages/home.dui_law_img')" title="@lang('pages/home.dui_law_img_alt')" alt="@lang('pages/home.dui_law_img_alt')"></a>
                 </div>
             </div>
         </div>

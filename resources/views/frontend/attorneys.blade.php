@@ -14,7 +14,7 @@
 <div class="attorneys_row">
     <div class="container">
         <div class="attorneys_block">
-            <img src="@lang('pages/attorneys.raul_img')" class="attorneys_sub_block" alt="@lang('pages/attorneys.raul_img_alt')">
+            <img src="@lang('pages/attorneys.raul_img')" class="attorneys_sub_block" title="@lang('pages/attorneys.raul_img_alt')" alt="@lang('pages/attorneys.raul_img_alt')">
             <span class="attorneys_sub_block_right">
                 <br>
                 <h6>{{ trans('general.attorney') }}</h6>
@@ -25,7 +25,7 @@
 
         </div>
         <div class="attorneys_block">
-            <img src="@lang('pages/attorneys.soulmaz_img')" class="attorneys_sub_block" alt="@lang('pages/attorneys.soulmaz_img_alt')">
+            <img src="@lang('pages/attorneys.soulmaz_img')" class="attorneys_sub_block" title="@lang('pages/attorneys.soulmaz_img_alt')" alt="@lang('pages/attorneys.soulmaz_img_alt')">
             <span class="attorneys_sub_block_right">
                 <br>
                 <h6>{{ trans('pages/attorneys.attorney_female') }}</h6>
