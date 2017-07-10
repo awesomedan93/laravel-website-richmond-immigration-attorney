@@ -7,7 +7,7 @@
                 <div class="lawyer_left_block">
                     <img src="@lang('pages/attorneys/raul.img')" title="@lang('pages/attorneys/raul.img_alt')" alt="@lang('pages/attorneys/raul.img_alt')">
                     <p>
-                        {{ trans('general.email') }}: raul@novotaghavi.com<br>
+                        {{ trans('general.email') }}: <a href="mailto:raul@novotaghavi.com">raul@novotaghavi.com</a><br>
                         {{ trans('general.phone') }}: (804) 614-6920
                     </p>
                 </div>
