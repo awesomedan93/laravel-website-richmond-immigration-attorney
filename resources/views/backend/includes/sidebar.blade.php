@@ -24,6 +24,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
+                            <li class="{{ Request::segment(3) == 'pages.cases'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.cases') }}"><i class="fa fa-circle-o"></i>Base Page</a></li>
                             <li class="{{ Request::segment(3) == 'pages.cases.criminal_defense'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.cases.criminal_defense') }}"><i class="fa fa-circle-o"></i>Criminal Defense</a></li>
                             <li class="{{ Request::segment(3) == 'pages.cases.immigration_law'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.cases.immigration_law') }}"><i class="fa fa-circle-o"></i>Immigration Law</a></li>
                             <li class="{{ Request::segment(3) == 'pages.cases.traffic_law'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.cases.traffic_law') }}"><i class="fa fa-circle-o"></i>Traffic Law</a></li>
@@ -37,6 +38,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
+                            <li class="{{ Request::segment(3) == 'pages.attorneys'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.attorneys') }}"><i class="fa fa-circle-o"></i>Base Page</a></li>
                             <li class="{{ Request::segment(3) == 'pages.raul_novo'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.raul_novo') }}"><i class="fa fa-circle-o"></i>Raul Novo</a></li>
                             <li class="{{ Request::segment(3) == 'pages.soulmaz_taghavi'?'active ':'' }}"><a href="{{ LaravelLocalization::getLocalizedURL(null, 'dashboard/seo/pages.soulmaz_taghavi') }}"><i class="fa fa-circle-o"></i>Soulmaz Taghavi</a></li>
                         </ul>
